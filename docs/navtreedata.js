@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Project Template", "index.html", [
+  [ "Scheduler Sim", "index.html", [
     [ "A CPU Scheduling Algorithm Simulator in C++", "index.html", [
       [ "Setting up your workspace", "index.html#autotoc_md1", null ],
       [ "How to run", "index.html#autotoc_md2", null ],
