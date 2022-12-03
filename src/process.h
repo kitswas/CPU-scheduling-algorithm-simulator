@@ -1,3 +1,6 @@
+#ifndef PROCESS_CLASS
+#define PROCESS_CLASS
+
 #include <iostream>
 
 class Process
@@ -44,3 +47,5 @@ std::ostream &operator<<(std::ostream &os, const Process &process)
 {
 	return os << process.toString();
 }
+
+#endif // PROCESS_CLASS
