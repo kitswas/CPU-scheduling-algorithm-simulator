@@ -3,5 +3,5 @@ project(CPP_project)
 
 set(CMAKE_CXX_STANDARD 20)
 
-set(SOURCES src/main.cpp src/process.cpp)
+set(SOURCES src/main.cpp src/process.cpp src/process_creator.cpp)
 add_executable(executable ${SOURCES})

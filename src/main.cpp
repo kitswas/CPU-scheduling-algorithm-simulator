@@ -11,11 +11,14 @@
  */
 
 #include <iostream>
-#include "process.h"
+#include "process_creator.h"
 
 int main()
 {
-	Process p(1, 2, 3);
-	std::cout << p << std::endl;
+	Process **processes = ProcessCreator::createProcesses(10);
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << *processes[i] << std::endl;
+	}
 	return 0;
 }
