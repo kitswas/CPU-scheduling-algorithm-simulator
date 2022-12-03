@@ -1,18 +1,21 @@
 /**
  * @file main.cpp
- * @brief Just trying out doxygen
- * @author Does it matter?
+ * @brief
+ * @author Swastik Pal
  * @version 0.1
- * @date 2022-11-02
+ * @date 2022-12-03
  *
  * @copyright Copyright (c) 2022
  *
- * Comments _must_ be written in [**Markdown**](https://www.markdownguide.org/cheat-sheet/).
+ * Comments _can_ be written in [**Markdown**](https://www.markdownguide.org/cheat-sheet/).
  */
 
 #include <iostream>
+#include "process.h"
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+int main()
+{
+	Process p(1, 2, 3);
+	std::cout << p << std::endl;
+	return 0;
 }
