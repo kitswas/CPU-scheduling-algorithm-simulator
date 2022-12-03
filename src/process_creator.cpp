@@ -1,13 +1,13 @@
 #include <cmath>
 #include "process_creator.h"
 
-Process **ProcessCreator::createProcesses(int numProcesses)
+std::vector<std::unique_ptr<Process>> ProcessCreator::createProcesses(int numProcesses)
 {
 	srand(time(NULL));
-	Process **processes = new Process *[numProcesses];
+	std::vector<std::unique_ptr<Process>> processes;
 	for (int i = 0; i < numProcesses; i++)
 	{
-		processes[i] = new Process(createdProcesses, rand() % 10, rand() % 10);
+		processes.push_back(std::make_unique<Process>(Process(createdProcesses, rand() % 10, rand() % 10)));
 		createdProcesses++;
 	}
 	return processes;

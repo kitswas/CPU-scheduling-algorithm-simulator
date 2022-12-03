@@ -1,6 +1,8 @@
 #ifndef PROCESS_CREATOR_H
 #define PROCESS_CREATOR_H
 
+#include <memory>
+#include <vector>
 #include "process.h"
 
 /**
@@ -14,7 +16,7 @@ private:
 	inline static int createdProcesses = 0;
 
 public:
-	static Process **createProcesses(int numProcesses);
+	static std::vector<std::unique_ptr<Process>> createProcesses(int numProcesses);
 };
 
 #endif // PROCESS_CREATOR_H

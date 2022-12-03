@@ -15,10 +15,10 @@
 
 int main()
 {
-	Process **processes = ProcessCreator::createProcesses(10);
-	for (int i = 0; i < 10; i++)
+	std::vector<std::unique_ptr<Process>> processes = ProcessCreator::createProcesses(10);
+	for (const auto &process : processes)
 	{
-		std::cout << *processes[i] << std::endl;
+		std::cout << *process << std::endl;
 	}
 	return 0;
 }
