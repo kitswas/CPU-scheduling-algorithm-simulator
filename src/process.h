@@ -19,6 +19,7 @@ public:
 	Process(int pid, int arrivalTime, int burstTime);
 	~Process();
 	std::string toString() const;
+	friend class Scheduler;
 };
 
 std::ostream &operator<<(std::ostream &os, const Process &process);
