@@ -3,9 +3,10 @@ var indexSectionsWithContent =
   0: "acfmnoprst~",
   1: "cfprs",
   2: "mprs",
-  3: "cfmoprst~",
+  3: "cmopst~",
   4: "cnp",
-  5: "a"
+  5: "s",
+  6: "a"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "pages"
+  5: "related",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "Files",
   3: "Functions",
   4: "Variables",
-  5: "Pages"
+  5: "Friends",
+  6: "Pages"
 };
 
