@@ -6,7 +6,7 @@
 
 class Process
 {
-private:
+public:
 	int pid;
 	int arrivalTime;
 	int burstTime;
@@ -15,7 +15,6 @@ private:
 	int waitingTime;
 	int responseTime;
 
-public:
 	Process(int pid, int arrivalTime, int burstTime);
 	~Process();
 	std::string toString() const;
