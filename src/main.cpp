@@ -12,11 +12,20 @@
 
 #include <iostream>
 #include "process_creator.h"
+#include "scheduler.h"
 
 int main()
 {
-	std::vector<std::unique_ptr<Process>> processes = ProcessCreator::createProcesses(10);
+	std::vector<std::unique_ptr<Process>> processes = ProcessCreator::createProcesses(5);
+	std::cout << "Processes created" << std::endl;
 	for (const auto &process : processes)
+	{
+		std::cout << *process << std::endl;
+	}
+	Scheduler scheduler(processes);
+	scheduler.sortProcessesByArrivalTime();
+	std::cout << "After sorting" << std::endl;
+	for (const auto &process : scheduler.getProcesses())
 	{
 		std::cout << *process << std::endl;
 	}
