@@ -3,7 +3,7 @@
 
 std::vector<std::unique_ptr<Process>> ProcessCreator::createProcesses(int numProcesses)
 {
-	srand(time(NULL));
+	srand(static_cast<unsigned int>(time(NULL)));
 	std::vector<std::unique_ptr<Process>> processes;
 	for (int i = 0; i < numProcesses; i++)
 	{
