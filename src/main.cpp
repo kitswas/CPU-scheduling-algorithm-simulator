@@ -22,7 +22,7 @@ int main()
 	{
 		std::cout << *process << std::endl;
 	}
-	Scheduler scheduler(processes);
+	FCFS scheduler(processes);
 	scheduler.sortProcessesByArrivalTime();
 	std::cout << "After sorting" << std::endl;
 	for (const auto &process : scheduler.getProcesses())
