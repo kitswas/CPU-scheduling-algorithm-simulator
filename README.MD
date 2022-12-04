@@ -44,6 +44,8 @@ You can generate the documentation by running the following command:
 doxygen Doxyfile
 ```
 
-This repository has automated workflow via Github Actions.  
-Documentation is auto-generated and deployed to [Github Pages](https://kitswas.github.io/CPP_project_template/).  
-Disable Actions on your own copy or delete the [workflows](./.github/workflows) folder if you do not want to be billed. This is **not my responsiblity.**
+Once done, you can open the generated documentation by opening the [`docs/index.html`](docs/index.html) file in your browser.
+
+This repository has automated workflow via Github Actions. Documentation is auto-generated.  
+Disable Actions on your own fork or delete the [workflows](./.github/workflows) folder if you do not want to be billed.  
+This is **not my responsiblity.**
