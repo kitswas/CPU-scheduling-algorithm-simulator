@@ -25,27 +25,18 @@ class FCFS : public Scheduler
 {
 private:
 	/* data */
-public:
-	FCFS(/* args */);
-	~FCFS();
 };
 
 class RR : public Scheduler
 {
 private:
 	/* data */
-public:
-	RR(/* args */);
-	~RR();
 };
 
-class CFS: public Scheduler
+class CFS : public Scheduler
 {
 private:
 	/* data */
-public:
-	CFS(/* args */);
-	~CFS();
 };
 
 #endif // SCHEDULER_CLASS
