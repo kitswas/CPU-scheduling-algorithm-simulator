@@ -3,10 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include "min_heap.h"
 
 class Process
 {
-public:
+protected:
 	int pid;
 	int arrivalTime;
 	int burstTime;
@@ -15,10 +16,12 @@ public:
 	int waitingTime;
 	int responseTime;
 
+public:
 	Process(int pid, int arrivalTime, int burstTime);
 	~Process();
 	std::string toString() const;
 	friend class Scheduler;
+	friend class MinHeap<std::unique_ptr<Process>>;
 };
 
 std::ostream &operator<<(std::ostream &os, const Process &process);
