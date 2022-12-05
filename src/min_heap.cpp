@@ -1,3 +1,8 @@
+#include "min_heap.h"
+#include "process.h"
+
+template class MinHeap<std::unique_ptr<Process>>;
+
 template <typename T>
 MinHeap<T>::MinHeap(std::vector<T> &vec)
 {
