@@ -1,29 +1,3 @@
-// #include <iostream>
-
-#include "min_heap.h"
-// #include "process.h"
-// #include "process_creator.h"
-
-// int main()
-// {
-// 	std::vector<std::unique_ptr<Process>> processes = ProcessCreator::createProcesses(9);
-// 	std::cout << "Processes created" << std::endl;
-// 	for (const auto &process : processes)
-// 	{
-// 		std::cout << *process << std::endl;
-// 	}
-// 	std::cout << "After heapifying" << std::endl;
-// 	MinHeap<std::unique_ptr<Process>> heap(processes);
-// 	heap.printHeap();
-// 	heap.extractMin();
-// 	std::cout << "After extracting min" << std::endl;
-// 	heap.printHeap();
-// 	heap.insert(std::make_unique<Process>(10, 0, 1));
-// 	std::cout << "After inserting" << std::endl;
-// 	heap.printHeap();
-// 	return 0;
-// }
-
 template <typename T>
 MinHeap<T>::MinHeap(std::vector<T> &vec)
 {

@@ -24,4 +24,6 @@ public:
 	void decreaseKey(int index, T element);
 };
 
+#include "min_heap.tpp"
+
 #endif // MIN_HEAP_H
