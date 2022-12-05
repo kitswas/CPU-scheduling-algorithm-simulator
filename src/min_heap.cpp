@@ -20,11 +20,11 @@ void MinHeap<T>::printHeap() const
 }
 
 template <typename T>
-void MinHeap<T>::heapify(int index)
+void MinHeap<T>::heapify(size_t index)
 {
-	int left = 2 * index + 1;
-	int right = 2 * index + 2;
-	int smallest = index;
+	size_t left = 2 * index + 1;
+	size_t right = 2 * index + 2;
+	size_t smallest = index;
 	if (left < heap.size() && heap[left]->arrivalTime < heap[smallest]->arrivalTime)
 	{
 		smallest = left;
@@ -43,9 +43,15 @@ void MinHeap<T>::heapify(int index)
 template <typename T>
 void MinHeap<T>::buildHeap()
 {
-	for (int i = heap.size() / 2 - 1; i >= 0; i--)
+	for (size_t i = heap.size() / 2 - 1; i >= 1; i--)
 	{
 		heapify(i);
+	}
+	if (heap.size() > 0)
+	{
+		// This split is necessary because the size_t type is unsigned
+		// Hence, i >= 0 will always be true
+		heapify(0);
 	}
 }
 
@@ -53,7 +59,7 @@ template <typename T>
 void MinHeap<T>::insert(T element)
 {
 	heap.push_back(std::move(element));
-	int index = heap.size() - 1;
+	size_t index = heap.size() - 1;
 	while (index > 0 && heap[index]->arrivalTime < heap[(index - 1) / 2]->arrivalTime)
 	{
 		heap[index].swap(heap[(index - 1) / 2]);
@@ -72,7 +78,7 @@ T MinHeap<T>::extractMin()
 }
 
 template <typename T>
-void MinHeap<T>::decreaseKey(int index, T element)
+void MinHeap<T>::decreaseKey(size_t index, T element)
 {
 	heap[index] = std::move(element);
 	while (index > 0 && heap[index]->arrivalTime < heap[(index - 1) / 2]->arrivalTime)

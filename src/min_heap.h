@@ -17,11 +17,11 @@ public:
 	~MinHeap() = default;
 
 	void printHeap() const;
-	void heapify(int index);
+	void heapify(size_t index);
 	void buildHeap();
 	void insert(T element);
 	T extractMin();
-	void decreaseKey(int index, T element);
-}
+	void decreaseKey(size_t index, T element);
+};
 
 #endif // MIN_HEAP_H
