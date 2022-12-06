@@ -1,4 +1,4 @@
-var scheduler_8h =
+var scheduler_8hpp =
 [
     [ "Scheduler", "classScheduler.html", "classScheduler" ],
     [ "FCFS", "classFCFS.html", null ],

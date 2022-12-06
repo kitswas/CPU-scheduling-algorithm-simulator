@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Scheduler Sim: src/scheduler.h Source File</title>
+<title>Scheduler Sim: src/scheduler.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('scheduler_8h_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('scheduler_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -90,13 +90,13 @@ $(document).ready(function(){initNavTree('scheduler_8h_source.html',''); initRes
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">scheduler.h</div></div>
+  <div class="headertitle"><div class="title">scheduler.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="scheduler_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SCHEDULER_CLASS</span></div>
+<a href="scheduler_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SCHEDULER_CLASS</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SCHEDULER_CLASS</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="process_8h.html">process.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="process_8hpp.html">process.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
@@ -131,22 +131,22 @@ $(document).ready(function(){initNavTree('scheduler_8h_source.html',''); initRes
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif </span><span class="comment">// SCHEDULER_CLASS</span></div>
-<div class="ttc" id="aclassCFS_html"><div class="ttname"><a href="classCFS.html">CFS</a></div><div class="ttdef"><b>Definition:</b> scheduler.h:37</div></div>
-<div class="ttc" id="aclassFCFS_html"><div class="ttname"><a href="classFCFS.html">FCFS</a></div><div class="ttdef"><b>Definition:</b> scheduler.h:25</div></div>
-<div class="ttc" id="aclassRR_html"><div class="ttname"><a href="classRR.html">RR</a></div><div class="ttdef"><b>Definition:</b> scheduler.h:31</div></div>
-<div class="ttc" id="aclassScheduler_html"><div class="ttname"><a href="classScheduler.html">Scheduler</a></div><div class="ttdoc">Abstract class for all scheduler types.</div><div class="ttdef"><b>Definition:</b> scheduler.h:13</div></div>
-<div class="ttc" id="aclassScheduler_html_a27bf24bc1ce658da4210ef824042b2f4"><div class="ttname"><a href="classScheduler.html#a27bf24bc1ce658da4210ef824042b2f4">Scheduler::numberOfProcesses</a></div><div class="ttdeci">int numberOfProcesses</div><div class="ttdef"><b>Definition:</b> scheduler.h:16</div></div>
+<div class="ttc" id="aclassCFS_html"><div class="ttname"><a href="classCFS.html">CFS</a></div><div class="ttdef"><b>Definition:</b> scheduler.hpp:37</div></div>
+<div class="ttc" id="aclassFCFS_html"><div class="ttname"><a href="classFCFS.html">FCFS</a></div><div class="ttdef"><b>Definition:</b> scheduler.hpp:25</div></div>
+<div class="ttc" id="aclassRR_html"><div class="ttname"><a href="classRR.html">RR</a></div><div class="ttdef"><b>Definition:</b> scheduler.hpp:31</div></div>
+<div class="ttc" id="aclassScheduler_html"><div class="ttname"><a href="classScheduler.html">Scheduler</a></div><div class="ttdoc">Abstract class for all scheduler types.</div><div class="ttdef"><b>Definition:</b> scheduler.hpp:13</div></div>
+<div class="ttc" id="aclassScheduler_html_a27bf24bc1ce658da4210ef824042b2f4"><div class="ttname"><a href="classScheduler.html#a27bf24bc1ce658da4210ef824042b2f4">Scheduler::numberOfProcesses</a></div><div class="ttdeci">int numberOfProcesses</div><div class="ttdef"><b>Definition:</b> scheduler.hpp:16</div></div>
 <div class="ttc" id="aclassScheduler_html_a80d0d3fea0df1dabfcf4ba70845c852a"><div class="ttname"><a href="classScheduler.html#a80d0d3fea0df1dabfcf4ba70845c852a">Scheduler::printSchedule</a></div><div class="ttdeci">virtual void printSchedule()=0</div></div>
 <div class="ttc" id="aclassScheduler_html_aa564689d54f6463f2707e3e9b36ac906"><div class="ttname"><a href="classScheduler.html#aa564689d54f6463f2707e3e9b36ac906">Scheduler::schedule</a></div><div class="ttdeci">virtual void schedule()=0</div></div>
-<div class="ttc" id="aclassScheduler_html_aa9e4ecb5c8295a6e2e5886d0f11651d3"><div class="ttname"><a href="classScheduler.html#aa9e4ecb5c8295a6e2e5886d0f11651d3">Scheduler::currentTime</a></div><div class="ttdeci">int currentTime</div><div class="ttdef"><b>Definition:</b> scheduler.h:17</div></div>
-<div class="ttc" id="aclassScheduler_html_ad0511b0d78d0f48832f61737d46310b3"><div class="ttname"><a href="classScheduler.html#ad0511b0d78d0f48832f61737d46310b3">Scheduler::processes</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; Process &gt; &gt; processes</div><div class="ttdef"><b>Definition:</b> scheduler.h:15</div></div>
-<div class="ttc" id="aprocess_8h_html"><div class="ttname"><a href="process_8h.html">process.h</a></div></div>
+<div class="ttc" id="aclassScheduler_html_aa9e4ecb5c8295a6e2e5886d0f11651d3"><div class="ttname"><a href="classScheduler.html#aa9e4ecb5c8295a6e2e5886d0f11651d3">Scheduler::currentTime</a></div><div class="ttdeci">int currentTime</div><div class="ttdef"><b>Definition:</b> scheduler.hpp:17</div></div>
+<div class="ttc" id="aclassScheduler_html_ad0511b0d78d0f48832f61737d46310b3"><div class="ttname"><a href="classScheduler.html#ad0511b0d78d0f48832f61737d46310b3">Scheduler::processes</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; Process &gt; &gt; processes</div><div class="ttdef"><b>Definition:</b> scheduler.hpp:15</div></div>
+<div class="ttc" id="aprocess_8hpp_html"><div class="ttname"><a href="process_8hpp.html">process.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="scheduler_8h.html">scheduler.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="scheduler_8hpp.html">scheduler.hpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
