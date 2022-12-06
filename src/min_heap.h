@@ -10,10 +10,10 @@ class MinHeap
 {
 private:
 	std::vector<T> heap;
+	int (*compare)(const T &a, const T &b);
 
 public:
-	MinHeap() = default;
-	MinHeap(std::vector<T> &vec);
+	MinHeap(std::vector<T> &vec, int (*comparator)(const T &a, const T &b));
 	~MinHeap() = default;
 
 	void printHeap() const;

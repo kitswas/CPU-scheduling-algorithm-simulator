@@ -25,7 +25,7 @@ int main()
 	}
 	// FCFS scheduler(processes);
 	std::cout << "After heapifying" << std::endl;
-	MinHeap<std::unique_ptr<Process>> heap(processes);
+	MinHeap<std::unique_ptr<Process>> heap(processes, compareArrivalTime);
 	heap.printHeap();
 	heap.extractMin();
 	std::cout << "After extracting min" << std::endl;

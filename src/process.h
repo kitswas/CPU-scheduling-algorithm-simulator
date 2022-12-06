@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include "min_heap.h"
+#include <memory>
 
 class Process
 {
@@ -20,9 +20,12 @@ public:
 	Process(int pid, int arrivalTime, int burstTime);
 	~Process();
 	std::string toString() const;
+
 	friend class Scheduler;
-	friend class MinHeap<std::unique_ptr<Process>>;
+	friend int compareArrivalTime(const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b);
 };
+
+int compareArrivalTime(const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b);
 
 std::ostream &operator<<(std::ostream &os, const Process &process);
 

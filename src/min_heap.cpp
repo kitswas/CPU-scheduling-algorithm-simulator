@@ -4,9 +4,10 @@
 template class MinHeap<std::unique_ptr<Process>>;
 
 template <typename T>
-MinHeap<T>::MinHeap(std::vector<T> &vec)
+MinHeap<T>::MinHeap(std::vector<T> &vec, int (*comparator)(const T &a, const T &b))
 {
 	heap = std::move(vec);
+	this->compare = comparator;
 	buildHeap();
 }
 
@@ -25,11 +26,11 @@ void MinHeap<T>::heapify(size_t index)
 	size_t left = 2 * index + 1;
 	size_t right = 2 * index + 2;
 	size_t smallest = index;
-	if (left < heap.size() && heap[left]->arrivalTime < heap[smallest]->arrivalTime)
+	if (left < heap.size() && compare(heap[left], heap[smallest]) < 0)
 	{
 		smallest = left;
 	}
-	if (right < heap.size() && heap[right]->arrivalTime < heap[smallest]->arrivalTime)
+	if (right < heap.size() && compare(heap[right], heap[smallest]) < 0)
 	{
 		smallest = right;
 	}
@@ -60,7 +61,7 @@ void MinHeap<T>::insert(T element)
 {
 	heap.push_back(std::move(element));
 	size_t index = heap.size() - 1;
-	while (index > 0 && heap[index]->arrivalTime < heap[(index - 1) / 2]->arrivalTime)
+	while (index > 0 && compare(heap[index], heap[(index - 1) / 2]) < 0)
 	{
 		heap[index].swap(heap[(index - 1) / 2]);
 		index = (index - 1) / 2;
@@ -81,7 +82,7 @@ template <typename T>
 void MinHeap<T>::decreaseKey(size_t index, T element)
 {
 	heap[index] = std::move(element);
-	while (index > 0 && heap[index]->arrivalTime < heap[(index - 1) / 2]->arrivalTime)
+	while (index > 0 && compare(heap[index], heap[(index - 1) / 2]) < 0)
 	{
 		heap[index].swap(heap[(index - 1) / 2]);
 		index = (index - 1) / 2;
