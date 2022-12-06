@@ -19,25 +19,18 @@ int main()
 {
 	std::vector<std::unique_ptr<Process>> processes = ProcessCreator::createProcesses(5);
 	std::cout << "Processes created" << std::endl;
+	std::cout << "PID\tAT\tBT\tCT\tTAT\tWT\tRT" << std::endl;
 	for (const auto &process : processes)
 	{
 		std::cout << *process << std::endl;
 	}
-	// FCFS scheduler(processes);
-	std::cout << "After heapifying" << std::endl;
-	MinHeap<std::unique_ptr<Process>> heap(processes, compareArrivalTime);
-	heap.printHeap();
-	heap.extractMin();
-	std::cout << "After extracting min" << std::endl;
-	heap.printHeap();
-	heap.insert(std::make_unique<Process>(10, 0, 1));
-	std::cout << "After inserting" << std::endl;
-	heap.printHeap();
-	// scheduler.sortProcessesByArrivalTime();
-	// std::cout << "After sorting" << std::endl;
-	// for (const auto &process : scheduler.getProcesses())
-	// {
-	// 	std::cout << *process << std::endl;
-	// }
+	FCFS scheduler(processes);
+	scheduler.schedule();
+	std::cout << "Processes scheduled" << std::endl;
+	std::cout << "PID\tAT\tBT\tCT\tTAT\tWT\tRT" << std::endl;
+	for (const auto &process : scheduler.getProcesses())
+	{
+		std::cout << *process << std::endl;
+	}
 	return 0;
 }

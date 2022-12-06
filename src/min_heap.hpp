@@ -15,6 +15,8 @@ class MinHeap
 {
 private:
 	std::vector<T> heap;
+	void heapify(size_t index);
+	size_t size() const;
 	int (*compare)(const T &a, const T &b);
 
 public:
@@ -28,11 +30,11 @@ public:
 	~MinHeap() = default;
 
 	void printHeap() const;
-	void heapify(size_t index);
 	void buildHeap();
 	void insert(T element);
 	T extractMin();
 	void decreaseKey(size_t index, T element);
+	bool isEmpty() const;
 };
 
 #endif // MIN_HEAP_H

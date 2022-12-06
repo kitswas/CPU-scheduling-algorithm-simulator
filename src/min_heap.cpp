@@ -88,3 +88,15 @@ void MinHeap<T>::decreaseKey(size_t index, T element)
 		index = (index - 1) / 2;
 	}
 }
+
+template <typename T>
+size_t MinHeap<T>::size() const
+{
+	return heap.size();
+}
+
+template <typename T>
+bool MinHeap<T>::isEmpty() const
+{
+	return heap.size() == 0;
+}
