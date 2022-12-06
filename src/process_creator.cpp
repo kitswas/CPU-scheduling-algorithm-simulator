@@ -1,5 +1,5 @@
 #include <cmath>
-#include "process_creator.h"
+#include "process_creator.hpp"
 
 std::vector<std::unique_ptr<Process>> ProcessCreator::createProcesses(int numProcesses)
 {

@@ -11,9 +11,9 @@
  */
 
 #include <iostream>
-#include "process_creator.h"
-#include "scheduler.h"
-#include "min_heap.h"
+#include "process_creator.hpp"
+#include "scheduler.hpp"
+#include "min_heap.hpp"
 
 int main()
 {

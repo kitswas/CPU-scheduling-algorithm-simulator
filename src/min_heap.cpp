@@ -1,5 +1,5 @@
-#include "min_heap.h"
-#include "process.h"
+#include "min_heap.hpp"
+#include "process.hpp"
 
 template class MinHeap<std::unique_ptr<Process>>;
 
