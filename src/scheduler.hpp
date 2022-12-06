@@ -1,7 +1,7 @@
 #ifndef SCHEDULER_CLASS
 #define SCHEDULER_CLASS
 
-#include "process.h"
+#include "process.hpp"
 #include <memory>
 #include <vector>
 

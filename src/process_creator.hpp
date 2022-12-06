@@ -3,7 +3,7 @@
 
 #include <memory>
 #include <vector>
-#include "process.h"
+#include "process.hpp"
 
 /**
  * @brief This class will create an array of processes and

@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "process.h"
+#include "process.hpp"
 
 Process::Process(int pid, int arrivalTime, int burstTime) : pid(pid), arrivalTime(arrivalTime), burstTime(burstTime)
 {
