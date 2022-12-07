@@ -18,13 +18,12 @@ void FCFS::schedule()
 		}
 		process->startTime = currentTime;
 		currentTime += process->burstTime;
-		process->endTime = currentTime;
+		process->completionTime = currentTime;
 		scheduled_processes.push_back(std::move(process));
 	}
 	processes = std::move(scheduled_processes);
 	for (auto &process : processes)
 	{
-		process->completionTime = process->endTime;
 		process->turnAroundTime = process->completionTime - process->arrivalTime;
 		process->waitingTime = process->turnAroundTime - process->burstTime;
 		process->responseTime = process->startTime - process->arrivalTime;

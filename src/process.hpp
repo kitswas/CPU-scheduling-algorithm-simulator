@@ -8,15 +8,14 @@
 class Process
 {
 public:
-	int pid;
-	int arrivalTime;
-	int burstTime;
+	const int pid; // The process id
+	const int arrivalTime;
+	const int burstTime;
 	int completionTime;
 	int turnAroundTime;
 	int waitingTime;
 	int responseTime;
 	int startTime;
-	int endTime;
 
 	Process(int pid, int arrivalTime, int burstTime);
 	~Process();
