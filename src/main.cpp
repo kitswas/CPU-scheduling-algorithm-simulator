@@ -12,11 +12,23 @@
 
 #include <iostream>
 #include "process_creator.hpp"
+#include "scheduler.hpp"
+#include "min_heap.hpp"
 
 int main()
 {
-	std::vector<std::unique_ptr<Process>> processes = ProcessCreator::createProcesses(10);
+	std::vector<std::unique_ptr<Process>> processes = ProcessCreator::createProcesses(5);
+	std::cout << "Processes created" << std::endl;
+	std::cout << "PID\tAT\tBT\tCT\tTAT\tWT\tRT" << std::endl;
 	for (const auto &process : processes)
+	{
+		std::cout << *process << std::endl;
+	}
+	FCFS scheduler(processes);
+	scheduler.schedule();
+	std::cout << "Processes scheduled" << std::endl;
+	std::cout << "PID\tAT\tBT\tCT\tTAT\tWT\tRT" << std::endl;
+	for (const auto &process : scheduler.getProcesses())
 	{
 		std::cout << *process << std::endl;
 	}

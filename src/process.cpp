@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "process.hpp"
 
@@ -28,4 +27,9 @@ std::string Process::toString() const
 std::ostream &operator<<(std::ostream &os, const Process &process)
 {
 	return os << process.toString();
+}
+
+int compareArrivalTime(const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b)
+{
+	return a->arrivalTime - b->arrivalTime;
 }
