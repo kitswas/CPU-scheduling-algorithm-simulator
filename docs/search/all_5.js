@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_3c_3c_0',['operator&lt;&lt;',['../process_8cpp.html#afa651cf840eacdb56d2150e816bddae0',1,'operator&lt;&lt;(std::ostream &amp;os, const Process &amp;process):&#160;process.cpp'],['../process_8hpp.html#afa651cf840eacdb56d2150e816bddae0',1,'operator&lt;&lt;(std::ostream &amp;os, const Process &amp;process):&#160;process.cpp']]]
+  ['fcfs_0',['FCFS',['../classFCFS.html',1,'FCFS'],['../classFCFS.html#a9d1cbc0db613a4c49d6f39400db2bcf6',1,'FCFS::FCFS()']]],
+  ['fcfs_2ecpp_1',['FCFS.cpp',['../FCFS_8cpp.html',1,'']]]
 ];

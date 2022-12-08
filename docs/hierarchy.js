@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "MinHeap< T >", "classMinHeap.html", null ],
     [ "Process", "classProcess.html", null ],
     [ "ProcessCreator", "classProcessCreator.html", null ],
     [ "Scheduler", "classScheduler.html", [

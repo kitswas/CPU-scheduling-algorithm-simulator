@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['currenttime_0',['currentTime',['../classScheduler.html#aa9e4ecb5c8295a6e2e5886d0f11651d3',1,'Scheduler']]]
+  ['arrivaltime_0',['arrivalTime',['../classProcess.html#a87f2328d45b6524f7e6931c8271b4784',1,'Process']]]
 ];

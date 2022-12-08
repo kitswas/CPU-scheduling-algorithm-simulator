@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['numberofprocesses_0',['numberOfProcesses',['../classScheduler.html#a27bf24bc1ce658da4210ef824042b2f4',1,'Scheduler']]]
+  ['extractmin_0',['extractMin',['../classMinHeap.html#a57c5b417163e9b47764e5980719b39bf',1,'MinHeap']]]
 ];

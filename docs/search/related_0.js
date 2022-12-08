@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['scheduler_0',['Scheduler',['../classProcess.html#afb88c77ea5daaefa6c8fa6bc5b9aa5c1',1,'Process']]]
+  ['comparearrivaltime_0',['compareArrivalTime',['../classProcess.html#a29f659ca174f696e550d29070bc23351',1,'Process']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['cfs_0',['CFS',['../classCFS.html',1,'']]],
-  ['createprocesses_1',['createProcesses',['../classProcessCreator.html#a223ffddfdf955d50930b58b60194f3cb',1,'ProcessCreator']]],
-  ['currenttime_2',['currentTime',['../classScheduler.html#aa9e4ecb5c8295a6e2e5886d0f11651d3',1,'Scheduler']]]
+  ['buildheap_0',['buildHeap',['../classMinHeap.html#a5927389d77170d47ca7f6212045698c5',1,'MinHeap']]],
+  ['bursttime_1',['burstTime',['../classProcess.html#a87e77da0b0a95ee337053cb5af9193d4',1,'Process']]]
 ];

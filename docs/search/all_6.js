@@ -1,11 +1,4 @@
 var searchData=
 [
-  ['printschedule_0',['printSchedule',['../classScheduler.html#a80d0d3fea0df1dabfcf4ba70845c852a',1,'Scheduler']]],
-  ['process_1',['Process',['../classProcess.html',1,'Process'],['../classProcess.html#ae16bd8cb7e09a7362b17dcc5ecca1f1f',1,'Process::Process()']]],
-  ['process_2ecpp_2',['process.cpp',['../process_8cpp.html',1,'']]],
-  ['process_2ehpp_3',['process.hpp',['../process_8hpp.html',1,'']]],
-  ['process_5fcreator_2ecpp_4',['process_creator.cpp',['../process__creator_8cpp.html',1,'']]],
-  ['process_5fcreator_2ehpp_5',['process_creator.hpp',['../process__creator_8hpp.html',1,'']]],
-  ['processcreator_6',['ProcessCreator',['../classProcessCreator.html',1,'']]],
-  ['processes_7',['processes',['../classScheduler.html#ad0511b0d78d0f48832f61737d46310b3',1,'Scheduler']]]
+  ['getprocesses_0',['getProcesses',['../classScheduler.html#a7e6c02d3ca224d3da116fbfd24b1c8ab',1,'Scheduler']]]
 ];

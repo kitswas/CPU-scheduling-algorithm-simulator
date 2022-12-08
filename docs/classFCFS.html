@@ -91,6 +91,7 @@ $(document).ready(function(){initNavTree('classFCFS.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classFCFS-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">FCFS Class Reference</div></div>
 </div><!--header-->
@@ -110,23 +111,93 @@ Collaboration diagram for FCFS:</div>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa7749c9a4a889f01708f8e346f9b3779"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFCFS.html#aa7749c9a4a889f01708f8e346f9b3779">schedule</a> ()</td></tr>
+<tr class="memdesc:aa7749c9a4a889f01708f8e346f9b3779"><td class="mdescLeft">&#160;</td><td class="mdescRight">A First Come First Serve (<a class="el" href="classFCFS.html">FCFS</a>) scheduler.  <a href="classFCFS.html#aa7749c9a4a889f01708f8e346f9b3779">More...</a><br /></td></tr>
+<tr class="separator:aa7749c9a4a889f01708f8e346f9b3779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d1cbc0db613a4c49d6f39400db2bcf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFCFS.html#a9d1cbc0db613a4c49d6f39400db2bcf6">FCFS</a> (std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt; &amp;<a class="el" href="classScheduler.html#ad0511b0d78d0f48832f61737d46310b3">processes</a>)</td></tr>
+<tr class="separator:a9d1cbc0db613a4c49d6f39400db2bcf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classScheduler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classScheduler')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classScheduler.html">Scheduler</a></td></tr>
 <tr class="memitem:aa564689d54f6463f2707e3e9b36ac906 inherit pub_methods_classScheduler"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#aa564689d54f6463f2707e3e9b36ac906">schedule</a> ()=0</td></tr>
 <tr class="separator:aa564689d54f6463f2707e3e9b36ac906 inherit pub_methods_classScheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80d0d3fea0df1dabfcf4ba70845c852a inherit pub_methods_classScheduler"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a80d0d3fea0df1dabfcf4ba70845c852a">printSchedule</a> ()=0</td></tr>
-<tr class="separator:a80d0d3fea0df1dabfcf4ba70845c852a inherit pub_methods_classScheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715b64de4088e13153d1fa4a5ceeec84 inherit pub_methods_classScheduler"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a715b64de4088e13153d1fa4a5ceeec84">sortProcessesByArrivalTime</a> ()</td></tr>
+<tr class="separator:a715b64de4088e13153d1fa4a5ceeec84 inherit pub_methods_classScheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e6c02d3ca224d3da116fbfd24b1c8ab inherit pub_methods_classScheduler"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a7e6c02d3ca224d3da116fbfd24b1c8ab">getProcesses</a> () const</td></tr>
+<tr class="separator:a7e6c02d3ca224d3da116fbfd24b1c8ab inherit pub_methods_classScheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea55aa06670953b17def806a717226b inherit pub_methods_classScheduler"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a9ea55aa06670953b17def806a717226b">Scheduler</a> (std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt; &amp;<a class="el" href="classScheduler.html#ad0511b0d78d0f48832f61737d46310b3">processes</a>)</td></tr>
+<tr class="separator:a9ea55aa06670953b17def806a717226b inherit pub_methods_classScheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classScheduler"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classScheduler')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classScheduler.html">Scheduler</a></td></tr>
 <tr class="memitem:ad0511b0d78d0f48832f61737d46310b3 inherit pro_attribs_classScheduler"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#ad0511b0d78d0f48832f61737d46310b3">processes</a></td></tr>
 <tr class="separator:ad0511b0d78d0f48832f61737d46310b3 inherit pro_attribs_classScheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27bf24bc1ce658da4210ef824042b2f4 inherit pro_attribs_classScheduler"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a27bf24bc1ce658da4210ef824042b2f4">numberOfProcesses</a></td></tr>
-<tr class="separator:a27bf24bc1ce658da4210ef824042b2f4 inherit pro_attribs_classScheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abff7e9de6646d3f383bd4ed350d9b6fe inherit pro_attribs_classScheduler"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#abff7e9de6646d3f383bd4ed350d9b6fe">numberOfProcesses</a></td></tr>
+<tr class="separator:abff7e9de6646d3f383bd4ed350d9b6fe inherit pro_attribs_classScheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9e4ecb5c8295a6e2e5886d0f11651d3 inherit pro_attribs_classScheduler"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#aa9e4ecb5c8295a6e2e5886d0f11651d3">currentTime</a></td></tr>
 <tr class="separator:aa9e4ecb5c8295a6e2e5886d0f11651d3 inherit pro_attribs_classScheduler"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9d1cbc0db613a4c49d6f39400db2bcf6" name="a9d1cbc0db613a4c49d6f39400db2bcf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d1cbc0db613a4c49d6f39400db2bcf6">&#9670;&#160;</a></span>FCFS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FCFS::FCFS </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>processes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa7749c9a4a889f01708f8e346f9b3779" name="aa7749c9a4a889f01708f8e346f9b3779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7749c9a4a889f01708f8e346f9b3779">&#9670;&#160;</a></span>schedule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FCFS::schedule </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A First Come First Serve (<a class="el" href="classFCFS.html">FCFS</a>) scheduler. </p>
+
+<p>Implements <a class="el" href="classScheduler.html#aa564689d54f6463f2707e3e9b36ac906">Scheduler</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a></li>
+<li>src/<a class="el" href="FCFS_8cpp.html">FCFS.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

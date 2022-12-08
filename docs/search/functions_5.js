@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tostring_0',['toString',['../classProcess.html#a8351aab4138b5d0f97c92400a983c4d5',1,'Process']]]
+  ['getprocesses_0',['getProcesses',['../classScheduler.html#a7e6c02d3ca224d3da116fbfd24b1c8ab',1,'Scheduler']]]
 ];
