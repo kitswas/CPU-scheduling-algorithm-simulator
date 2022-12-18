@@ -6,8 +6,6 @@
 #include <vector>
 #include <algorithm>
 
-typedef unsigned long time_unit;
-
 class Simulator
 {
 private:

@@ -29,7 +29,7 @@ std::ostream &operator<<(std::ostream &os, const Process &process)
 	return os << process.toString();
 }
 
-int compareArrivalTime(const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b)
+time_unit compareArrivalTime(const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b)
 {
 	return a->arrivalTime - b->arrivalTime;
 }
