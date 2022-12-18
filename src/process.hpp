@@ -23,10 +23,10 @@ public:
 	~Process();
 	std::string toString() const;
 
-	friend time_unit compareArrivalTime(const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b);
+	friend int compareArrivalTime(const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b);
 };
 
-time_unit compareArrivalTime(const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b);
+int compareArrivalTime(const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b);
 
 std::ostream &operator<<(std::ostream &os, const Process &process);
 
