@@ -24,7 +24,12 @@ void Simulator::startSim(time_unit simulationTime)
 		std::cout << "Current Time: " << currentTime << " milliseconds\n";
 		if (processes.size() > 0)
 		{
-			if (processes[0]->arrivalTime == currentTime)
+			/*
+			 * Since the processes are sorted by arrival time, we can check if the first process in the vector has arrived
+			 * If it has, we add it to the ready queue and remove it from the vector
+			 * Repeat this until the first process in the vector has not arrived yet
+			 */
+			while (processes.size() > 0 && processes[0]->arrivalTime == currentTime)
 			{
 				std::cout << "Process " << processes[0]->pid << " arrived at time " << currentTime << " milliseconds\n";
 				scheduler.addToReadyQueue(processes[0]);
