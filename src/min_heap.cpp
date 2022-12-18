@@ -4,6 +4,12 @@
 template class MinHeap<std::unique_ptr<Process>>;
 
 template <typename T>
+MinHeap<T>::MinHeap(int (*comparator)(const T &a, const T &b))
+{
+	this->compare = comparator;
+}
+
+template <typename T>
 MinHeap<T>::MinHeap(std::vector<T> &vec, int (*comparator)(const T &a, const T &b))
 {
 	heap = std::move(vec);

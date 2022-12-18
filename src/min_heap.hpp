@@ -20,8 +20,16 @@ private:
 	int (*compare)(const T &a, const T &b);
 
 public:
+
 	/**
 	 * @brief Construct a new Min Heap object
+	 *
+	 * @param comparator The comparator function to be used for comparing elements
+	 */
+	MinHeap(int (*comparator)(const T &a, const T &b));
+
+	/**
+	 * @brief Construct a new Min Heap object from a vector
 	 *
 	 * @param vec The vector to be converted into a heap
 	 * @param comparator The comparator function to be used for comparing elements
