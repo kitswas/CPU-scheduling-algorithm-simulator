@@ -1,5 +1,4 @@
 #include "scheduler.hpp"
-#include "min_heap.hpp"
 #include "process.hpp"
 #include <memory>
 #include <vector>
@@ -10,7 +9,6 @@
  */
 void FCFS::schedule()
 {
-	// MinHeap<std::unique_ptr<Process>> ready_queue(processes, compareArrivalTime);
 	// std::vector<std::unique_ptr<Process>> scheduled_processes;
 	// while (!ready_queue.isEmpty())
 	// {
@@ -31,4 +29,17 @@ void FCFS::schedule()
 	// 	process->waitingTime = process->turnAroundTime - process->burstTime;
 	// 	process->responseTime = process->startTime - process->arrivalTime;
 	// }
+}
+
+FCFS::FCFS() : ready_queue(compareArrivalTime)
+{
+}
+
+FCFS::~FCFS() {}
+
+bool FCFS::addToReadyQueue(std::unique_ptr<Process> &process)
+{
+	ready_queue.insert(std::move(process));
+	std::cout << "FCFS::addToReadyQueue() called\n";
+	return true;
 }
