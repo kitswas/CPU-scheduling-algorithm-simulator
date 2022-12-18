@@ -47,7 +47,7 @@ Logger::Logger(std::string logFileName)
 	{
 		std::cout << "Log file opened successfully\n";
 	}
-	logFile << "Time, PID, Status\n";
+	logFile << "Millisecond Number, Process Id, Status\n";
 }
 
 Logger::~Logger()
