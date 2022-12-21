@@ -7,6 +7,7 @@ Process::Process(int pid, int arrivalTime, int burstTime) : pid(pid), arrivalTim
 	this->turnAroundTime = -1;
 	this->waitingTime = -1;
 	this->responseTime = -1;
+	this->startTime = -1;
 }
 
 Process::~Process()
