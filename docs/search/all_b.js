@@ -7,6 +7,5 @@ var searchData=
   ['process_2ehpp_4',['process.hpp',['../process_8hpp.html',1,'']]],
   ['process_5fcreator_2ecpp_5',['process_creator.cpp',['../process__creator_8cpp.html',1,'']]],
   ['process_5fcreator_2ehpp_6',['process_creator.hpp',['../process__creator_8hpp.html',1,'']]],
-  ['processcreator_7',['ProcessCreator',['../classProcessCreator.html',1,'']]],
-  ['processes_8',['processes',['../classScheduler.html#ad0511b0d78d0f48832f61737d46310b3',1,'Scheduler']]]
+  ['processcreator_7',['ProcessCreator',['../classProcessCreator.html',1,'']]]
 ];

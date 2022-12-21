@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['waitingtime_0',['waitingTime',['../classProcess.html#a8f5fae072c24da4fe405eabb12097c40',1,'Process']]]
+  ['waitingtime_0',['waitingTime',['../classProcess.html#a499fa1d4d791bf16170920d12b3e1d51',1,'Process']]]
 ];
