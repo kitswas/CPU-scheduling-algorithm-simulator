@@ -1,5 +1,6 @@
 #include "simulator.hpp"
 #include "scheduler.hpp"
+#include "printer.hpp"
 
 time_unit millis = 1;
 time_unit seconds = 1000;
@@ -52,5 +53,13 @@ void Simulator::startSim(time_unit simulationTime)
 	for (auto &process : results)
 	{
 		std::cout << process->toString() << std::endl;
+	}
+	if (save_processes_to_file(results) == 0)
+	{
+		std::cout << "Processes saved to file successfully\n";
+	}
+	else
+	{
+		std::cout << "Error saving processes to file\n";
 	}
 }
