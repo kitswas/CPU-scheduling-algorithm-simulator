@@ -59,3 +59,53 @@ time_unit Process::getBurstTime() const
 {
 	return burstTime;
 }
+
+time_unit Process::getCompletionTime() const
+{
+	return completionTime;
+}
+
+time_unit Process::getTurnAroundTime() const
+{
+	return turnAroundTime;
+}
+
+time_unit Process::getWaitingTime() const
+{
+	return waitingTime;
+}
+
+time_unit Process::getResponseTime() const
+{
+	return responseTime;
+}
+
+time_unit Process::getStartTime() const
+{
+	return startTime;
+}
+
+void Process::setCompletionTime(time_unit completionTime)
+{
+	this->completionTime = completionTime;
+}
+
+void Process::setTurnAroundTime(time_unit turnAroundTime)
+{
+	this->turnAroundTime = turnAroundTime;
+}
+
+void Process::setWaitingTime(time_unit waitingTime)
+{
+	this->waitingTime = waitingTime;
+}
+
+void Process::setResponseTime(time_unit responseTime)
+{
+	this->responseTime = responseTime;
+}
+
+void Process::setStartTime(time_unit startTime)
+{
+	this->startTime = startTime;
+}
