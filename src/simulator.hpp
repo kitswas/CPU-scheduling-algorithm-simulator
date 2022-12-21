@@ -21,7 +21,7 @@ public:
 	~Simulator();
 	void sortProcessesByArrivalTime();
 	const std::vector<std::unique_ptr<Process>> &getProcesses() const;
-	void startSim(time_unit simulationTime);
+	void startSim(time_unit simulationTime, time_unit quantum);
 };
 
 inline const std::vector<std::unique_ptr<Process>> &Simulator::getProcesses() const
