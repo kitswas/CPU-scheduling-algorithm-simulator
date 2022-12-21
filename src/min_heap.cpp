@@ -1,7 +1,9 @@
 #include "min_heap.hpp"
 #include "process.hpp"
+#include "scheduler.hpp"
 
 template class MinHeap<std::unique_ptr<Process>>;
+template class MinHeap<std::unique_ptr<RRProcess>>;
 
 template <typename T>
 MinHeap<T>::MinHeap(int (*comparator)(const T &a, const T &b))

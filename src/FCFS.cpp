@@ -13,7 +13,7 @@ FCFS::FCFS() : ready_queue(compareArrivalTime)
 
 FCFS::~FCFS() {}
 
-bool FCFS::addToReadyQueue(std::unique_ptr<Process> &process)
+bool FCFS::addToReadyQueue(std::unique_ptr<Process> &process, [[maybe_unused]] time_unit _currentTime)
 {
 	ready_queue.insert(std::move(process));
 	// std::cout << "FCFS::addToReadyQueue() called\n"; // debugging only
