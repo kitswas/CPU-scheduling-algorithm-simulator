@@ -40,6 +40,6 @@ FCFS::~FCFS() {}
 bool FCFS::addToReadyQueue(std::unique_ptr<Process> &process)
 {
 	ready_queue.insert(std::move(process));
-	std::cout << "FCFS::addToReadyQueue() called\n";
+	// std::cout << "FCFS::addToReadyQueue() called\n"; // debugging only
 	return true;
 }
