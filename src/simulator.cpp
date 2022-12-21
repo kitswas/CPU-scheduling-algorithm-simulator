@@ -30,10 +30,10 @@ void Simulator::startSim(time_unit simulationTime)
 			 * If it has, we add it to the ready queue and remove it from the vector
 			 * Repeat this until the first process in the vector has not arrived yet
 			 */
-			while (processes.size() > 0 && processes[0]->arrivalTime == currentTime)
+			while (processes.size() > 0 && processes[0]->getArrivalTime() == currentTime)
 			{
-				std::cout << "Process " << processes[0]->pid << " arrived at time " << currentTime << " milliseconds\n";
-				logger->log(currentTime, processes[0]->pid, "Arrived");
+				std::cout << "Process " << processes[0]->getPid() << " arrived at time " << currentTime << " milliseconds\n";
+				logger->log(currentTime, processes[0]->getPid(), "Arrived");
 				scheduler.addToReadyQueue(processes[0]);
 				processes.erase(processes.begin());
 			}

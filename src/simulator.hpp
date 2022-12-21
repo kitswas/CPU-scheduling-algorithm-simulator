@@ -32,7 +32,7 @@ inline const std::vector<std::unique_ptr<Process>> &Simulator::getProcesses() co
 inline void Simulator::sortProcessesByArrivalTime()
 {
 	std::sort(processes.begin(), processes.end(), [](const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b)
-			  { return a->arrivalTime < b->arrivalTime; });
+			  { return a->getArrivalTime() < b->getArrivalTime(); });
 }
 
 #endif // SIMULATOR_CLASS

@@ -44,3 +44,18 @@ int compareArrivalTime(const std::unique_ptr<Process> &a, const std::unique_ptr<
 		return 0;
 	}
 }
+
+int Process::getPid() const
+{
+	return pid;
+}
+
+time_unit Process::getArrivalTime() const
+{
+	return arrivalTime;
+}
+
+time_unit Process::getBurstTime() const
+{
+	return burstTime;
+}
