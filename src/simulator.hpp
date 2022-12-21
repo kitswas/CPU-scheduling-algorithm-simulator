@@ -2,6 +2,7 @@
 #define SIMULATOR_CLASS
 
 #include "process.hpp"
+#include "logger.hpp"
 #include <memory>
 #include <vector>
 #include <algorithm>
@@ -11,6 +12,7 @@ class Simulator
 private:
 	std::vector<std::unique_ptr<Process>> processes;
 	std::size_t numberOfProcesses;
+	std::unique_ptr<Logger> logger;
 	time_unit currentTime;
 	time_unit simulationTime;
 

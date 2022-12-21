@@ -1,6 +1,5 @@
 #include "simulator.hpp"
 #include "scheduler.hpp"
-#include "logger.hpp"
 
 time_unit millis = 1;
 time_unit seconds = 1000;
@@ -19,7 +18,7 @@ Simulator::~Simulator()
 void Simulator::startSim(time_unit simulationTime)
 {
 	FCFS scheduler;
-	Logger logger("status.txt");
+	logger = std::make_unique<Logger>("status.txt");
 	this->simulationTime += simulationTime;
 	for (; currentTime < simulationTime; currentTime++)
 	{
@@ -34,7 +33,7 @@ void Simulator::startSim(time_unit simulationTime)
 			while (processes.size() > 0 && processes[0]->arrivalTime == currentTime)
 			{
 				std::cout << "Process " << processes[0]->pid << " arrived at time " << currentTime << " milliseconds\n";
-				logger.log(currentTime, processes[0]->pid, "Arrived");
+				logger->log(currentTime, processes[0]->pid, "Arrived");
 				scheduler.addToReadyQueue(processes[0]);
 				processes.erase(processes.begin());
 			}

@@ -36,7 +36,7 @@ public:
 	void log(time_unit occurrenceTime, int pid, std::string status);
 };
 
-Logger::Logger(std::string logFileName)
+inline Logger::Logger(std::string logFileName)
 {
 	logFile.open(logFileName);
 	if (!logFile.is_open())
@@ -50,7 +50,7 @@ Logger::Logger(std::string logFileName)
 	logFile << "Millisecond Number, Process Id, Status\n";
 }
 
-Logger::~Logger()
+inline Logger::~Logger()
 {
 	logFile.close();
 }
