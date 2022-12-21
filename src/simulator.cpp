@@ -18,11 +18,12 @@ Simulator::~Simulator()
 void Simulator::startSim(time_unit simulationTime)
 {
 	FCFS scheduler;
-	logger = std::make_unique<Logger>("status.txt");
+	std::vector<std::unique_ptr<Process>> results;
+	logger = std::make_shared<Logger>("status.txt");
 	this->simulationTime += simulationTime;
 	for (; currentTime < simulationTime; currentTime++)
 	{
-		std::cout << "Current Time: " << currentTime << " milliseconds\n";
+		// std::cout << "Current Time: " << currentTime << " milliseconds\n"; // debugging only
 		if (processes.size() > 0)
 		{
 			/*
@@ -38,10 +39,18 @@ void Simulator::startSim(time_unit simulationTime)
 				processes.erase(processes.begin());
 			}
 		}
-		else
-		{
-			std::cout << "No more processes to schedule\n";
-			break;
-		}
+		// else
+		// {
+		// 	std::cout << "No more processes to schedule\n";
+		// }
+		std::vector<std::unique_ptr<Process>> scheduled_processes = scheduler.schedule(currentTime, logger);
+		results.insert(results.end(), std::make_move_iterator(scheduled_processes.begin()), std::make_move_iterator(scheduled_processes.end()));
+	}
+	// print results
+	std::cout << "Simulation complete\n";
+	std::cout << "PID\tAT\tBT\tCT\tTAT\tWT\tRT" << std::endl;
+	for (auto &process : results)
+	{
+		std::cout << process->toString() << std::endl;
 	}
 }

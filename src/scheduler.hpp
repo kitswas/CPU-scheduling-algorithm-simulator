@@ -3,6 +3,7 @@
 
 #include "process.hpp"
 #include "min_heap.hpp"
+#include "logger.hpp"
 
 /**
  * @brief Abstract class for all scheduler types
@@ -13,7 +14,7 @@ class Scheduler
 protected:
 
 public:
-	virtual void schedule() = 0;
+	virtual std::vector<std::unique_ptr<Process>> schedule(time_unit &currentTime, std::shared_ptr<Logger> logger) = 0;
 	virtual bool addToReadyQueue(std::unique_ptr<Process> &process) = 0;
 	// virtual void printSchedule() = 0;
 };
@@ -25,7 +26,7 @@ private:
 public:
 	FCFS();
 	~FCFS();
-	void schedule();
+	std::vector<std::unique_ptr<Process>> schedule(time_unit &currentTime, std::shared_ptr<Logger> logger);
 	bool addToReadyQueue(std::unique_ptr<Process> &process);
 };
 

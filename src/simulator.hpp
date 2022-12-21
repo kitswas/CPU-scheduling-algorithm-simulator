@@ -12,7 +12,7 @@ class Simulator
 private:
 	std::vector<std::unique_ptr<Process>> processes;
 	std::size_t numberOfProcesses;
-	std::unique_ptr<Logger> logger;
+	std::shared_ptr<Logger> logger;
 	time_unit currentTime;
 	time_unit simulationTime;
 
