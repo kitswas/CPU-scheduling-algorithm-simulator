@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('logger_8hpp_source.html',''); initResi
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classLogger.html#a23d5493ecf61db62284f7d0698da23e8">log</a>(<a class="code hl_typedef" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> occurrenceTime, <span class="keywordtype">int</span> pid, std::string status);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classLogger.html#af5a52b329394fec322f6e163baec1abc">   39</a></span><a class="code hl_function" href="classLogger.html#af5a52b329394fec322f6e163baec1abc">Logger::Logger</a>(std::string logFileName)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classLogger.html#af5a52b329394fec322f6e163baec1abc">   39</a></span><span class="keyword">inline</span> <a class="code hl_function" href="classLogger.html#af5a52b329394fec322f6e163baec1abc">Logger::Logger</a>(std::string logFileName)</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    logFile.open(logFileName);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span> (!logFile.is_open())</div>
@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('logger_8hpp_source.html',''); initResi
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    logFile &lt;&lt; <span class="stringliteral">&quot;Millisecond Number, Process Id, Status\n&quot;</span>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classLogger.html#acb668a9e186a25fbaad2e4af6d1ed00a">   53</a></span><a class="code hl_function" href="classLogger.html#acb668a9e186a25fbaad2e4af6d1ed00a">Logger::~Logger</a>()</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classLogger.html#acb668a9e186a25fbaad2e4af6d1ed00a">   53</a></span><span class="keyword">inline</span> <a class="code hl_function" href="classLogger.html#acb668a9e186a25fbaad2e4af6d1ed00a">Logger::~Logger</a>()</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    logFile.close();</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>

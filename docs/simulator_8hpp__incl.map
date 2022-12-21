@@ -1,9 +1,11 @@
 <map id="src/simulator.hpp" name="src/simulator.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="197,5,331,31"/>
-<area shape="rect" id="node2" href="$process_8hpp.html" title=" " alt="" coords="90,79,190,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="192,152,269,177"/>
-<area shape="rect" id="node6" title=" " alt="" coords="267,79,330,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="355,79,440,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,152,85,177"/>
-<area shape="rect" id="node4" title=" " alt="" coords="109,152,168,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="245,5,379,31"/>
+<area shape="rect" id="node2" href="$process_8hpp.html" title=" " alt="" coords="174,152,274,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="229,225,307,251"/>
+<area shape="rect" id="node6" href="$logger_8hpp.html" title=" " alt="" coords="68,79,159,104"/>
+<area shape="rect" id="node8" title=" " alt="" coords="350,79,413,104"/>
+<area shape="rect" id="node9" title=" " alt="" coords="437,79,523,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,225,85,251"/>
+<area shape="rect" id="node4" title=" " alt="" coords="135,225,193,251"/>
+<area shape="rect" id="node7" title=" " alt="" coords="77,152,150,177"/>
 </map>

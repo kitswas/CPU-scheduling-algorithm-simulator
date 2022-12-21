@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bursttime_0',['burstTime',['../classProcess.html#a2c447789ec82e9e3ea0e29326f6b045e',1,'Process']]]
+  ['seconds_0',['seconds',['../simulator_8cpp.html#a51149a5e42d1aaed3954ab46f0b095b2',1,'simulator.cpp']]]
 ];

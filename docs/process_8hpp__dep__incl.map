@@ -1,13 +1,13 @@
 <map id="src/process.hpp" name="src/process.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="347,5,469,31"/>
-<area shape="rect" id="node2" href="$FCFS_8cpp.html" title=" " alt="" coords="5,152,109,177"/>
-<area shape="rect" id="node3" href="$logger_8hpp.html" title=" " alt="" coords="45,79,158,104"/>
-<area shape="rect" id="node5" href="$min__heap_8cpp.html" title=" " alt="" coords="699,79,835,104"/>
-<area shape="rect" id="node6" href="$process_8cpp.html" title=" " alt="" coords="859,79,981,104"/>
-<area shape="rect" id="node7" href="$process__creator_8hpp.html" title=" " alt="" coords="499,79,674,104"/>
-<area shape="rect" id="node10" href="$scheduler_8hpp.html" title=" " alt="" coords="182,79,317,104"/>
-<area shape="rect" id="node11" href="$simulator_8hpp.html" title=" " alt="" coords="341,79,475,104"/>
-<area shape="rect" id="node4" href="$simulator_8cpp.html" title=" " alt="" coords="183,152,316,177"/>
-<area shape="rect" id="node8" href="$main_8cpp.html" title=" " alt="" coords="355,152,461,177"/>
-<area shape="rect" id="node9" href="$process__creator_8cpp.html" title=" " alt="" coords="499,152,674,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="291,5,413,31"/>
+<area shape="rect" id="node2" href="$FCFS_8cpp.html" title=" " alt="" coords="5,225,109,251"/>
+<area shape="rect" id="node3" href="$logger_8hpp.html" title=" " alt="" coords="201,79,314,104"/>
+<area shape="rect" id="node4" href="$scheduler_8hpp.html" title=" " alt="" coords="95,152,230,177"/>
+<area shape="rect" id="node7" href="$simulator_8hpp.html" title=" " alt="" coords="254,152,389,177"/>
+<area shape="rect" id="node8" href="$min__heap_8cpp.html" title=" " alt="" coords="589,79,725,104"/>
+<area shape="rect" id="node9" href="$process_8cpp.html" title=" " alt="" coords="749,79,872,104"/>
+<area shape="rect" id="node10" href="$process__creator_8hpp.html" title=" " alt="" coords="390,79,565,104"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="291,225,397,251"/>
+<area shape="rect" id="node6" href="$simulator_8cpp.html" title=" " alt="" coords="133,225,267,251"/>
+<area shape="rect" id="node11" href="$process__creator_8cpp.html" title=" " alt="" coords="413,152,587,177"/>
 </map>
