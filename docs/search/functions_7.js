@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['minheap_1',['MinHeap',['../classMinHeap.html#a9f43b6981fd68150adb419e6b6fa4d71',1,'MinHeap']]]
+  ['insert_0',['insert',['../classMinHeap.html#a46e8869105a41794d967ee1f4c55212b',1,'MinHeap']]],
+  ['isempty_1',['isEmpty',['../classMinHeap.html#a5de8c204859602aab8b4f1239cbae325',1,'MinHeap']]]
 ];

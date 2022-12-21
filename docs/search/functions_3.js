@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['extractmin_0',['extractMin',['../classMinHeap.html#a57c5b417163e9b47764e5980719b39bf',1,'MinHeap']]]
+  ['decreasekey_0',['decreaseKey',['../classMinHeap.html#ac4b74f76141e1615d664856b7eeee199',1,'MinHeap']]]
 ];

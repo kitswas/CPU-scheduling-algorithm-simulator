@@ -1,31 +1,62 @@
 #include "scheduler.hpp"
-#include "min_heap.hpp"
+#include "process.hpp"
+#include <memory>
+#include <vector>
 
 /**
  * @brief A First Come First Serve (FCFS) scheduler
  *
  */
-void FCFS::schedule()
+FCFS::FCFS() : ready_queue(compareArrivalTime)
 {
-	MinHeap<std::unique_ptr<Process>> ready_queue(processes, compareArrivalTime);
+}
+
+FCFS::~FCFS() {}
+
+bool FCFS::addToReadyQueue(std::unique_ptr<Process> &process)
+{
+	ready_queue.insert(std::move(process));
+	// std::cout << "FCFS::addToReadyQueue() called\n"; // debugging only
+	return true;
+}
+
+std::vector<std::unique_ptr<Process>> FCFS::schedule(time_unit &currentTime, std::shared_ptr<Logger> logger)
+{
 	std::vector<std::unique_ptr<Process>> scheduled_processes;
-	while (!ready_queue.isEmpty())
+	static time_unit currentProcessRemainingTime = 0;
+	static std::unique_ptr<Process> currentProcess = nullptr;
+
+	--currentProcessRemainingTime;
+
+	if (currentProcessRemainingTime == 0) // won't enter on first run, as currentProcessRemainingTime will be -1
 	{
-		std::unique_ptr<Process> process = ready_queue.extractMin();
-		if (process->arrivalTime > currentTime)
+		// process completed
+		currentProcess->setCompletionTime(currentTime);
+		// log completion
+		std::cout << "Process " << currentProcess->getPid() << " ended at time " << currentTime << " milliseconds\n";
+		logger->log(currentTime, currentProcess->getPid(), "Exit");
+		// calculate metrics
+		currentProcess->setTurnAroundTime(currentProcess->getCompletionTime() - currentProcess->getArrivalTime());
+		currentProcess->setWaitingTime(currentProcess->getTurnAroundTime() - currentProcess->getBurstTime());
+		currentProcess->setResponseTime(currentProcess->getStartTime() - currentProcess->getArrivalTime());
+		// add to scheduled processes
+		scheduled_processes.push_back(std::move(currentProcess));
+		currentProcess = nullptr;
+	}
+
+	if (currentProcess == nullptr)
+	{
+		// check if there are any more processes in the ready queue
+		if (!ready_queue.isEmpty())
 		{
-			currentTime = process->arrivalTime;
+			currentProcess = ready_queue.extractMin();
+			currentProcess->setStartTime(currentTime);
+			currentProcessRemainingTime = currentProcess->getBurstTime();
+			// log start
+			std::cout << "Process " << currentProcess->getPid() << " started at time " << currentTime << " milliseconds\n";
+			logger->log(currentTime, currentProcess->getPid(), "Running");
 		}
-		process->startTime = currentTime;
-		currentTime += process->burstTime;
-		process->completionTime = currentTime;
-		scheduled_processes.push_back(std::move(process));
 	}
-	processes = std::move(scheduled_processes);
-	for (auto &process : processes)
-	{
-		process->turnAroundTime = process->completionTime - process->arrivalTime;
-		process->waitingTime = process->turnAroundTime - process->burstTime;
-		process->responseTime = process->startTime - process->arrivalTime;
-	}
+
+	return scheduled_processes;
 }

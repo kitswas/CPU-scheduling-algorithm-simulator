@@ -14,6 +14,7 @@
 #include "process_creator.hpp"
 #include "scheduler.hpp"
 #include "min_heap.hpp"
+#include "simulator.hpp"
 
 int main()
 {
@@ -24,13 +25,16 @@ int main()
 	{
 		std::cout << *process << std::endl;
 	}
-	FCFS scheduler(processes);
-	scheduler.schedule();
-	std::cout << "Processes scheduled" << std::endl;
-	std::cout << "PID\tAT\tBT\tCT\tTAT\tWT\tRT" << std::endl;
-	for (const auto &process : scheduler.getProcesses())
+	Simulator sim(processes);
+	sim.sortProcessesByArrivalTime();
+	// FCFS scheduler(processes);
+	// scheduler.schedule();
+	std::cout << "Processes sorted" << std::endl;
+	// std::cout << "PID\tAT\tBT\tCT\tTAT\tWT\tRT" << std::endl;
+	for (const auto &process : sim.getProcesses())
 	{
 		std::cout << *process << std::endl;
 	}
+	sim.startSim(50);
 	return 0;
 }

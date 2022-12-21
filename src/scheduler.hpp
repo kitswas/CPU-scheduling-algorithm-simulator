@@ -2,9 +2,8 @@
 #define SCHEDULER_CLASS
 
 #include "process.hpp"
-#include <memory>
-#include <vector>
-#include <algorithm>
+#include "min_heap.hpp"
+#include "logger.hpp"
 
 /**
  * @brief Abstract class for all scheduler types
@@ -13,36 +12,22 @@
 class Scheduler
 {
 protected:
-	std::vector<std::unique_ptr<Process>> processes;
-	std::size_t numberOfProcesses;
-	int currentTime;
 
 public:
-	virtual void schedule() = 0;
+	virtual std::vector<std::unique_ptr<Process>> schedule(time_unit &currentTime, std::shared_ptr<Logger> logger) = 0;
+	virtual bool addToReadyQueue(std::unique_ptr<Process> &process) = 0;
 	// virtual void printSchedule() = 0;
-	void sortProcessesByArrivalTime();
-	const std::vector<std::unique_ptr<Process>> &getProcesses() const;
-	Scheduler(std::vector<std::unique_ptr<Process>> &processes) : processes(std::move(processes)), numberOfProcesses(this->processes.size()), currentTime(0){};
 };
-
-inline const std::vector<std::unique_ptr<Process>> &Scheduler::getProcesses() const
-{
-	return processes;
-}
-
-inline void Scheduler::sortProcessesByArrivalTime()
-{
-	std::sort(processes.begin(), processes.end(), [](const std::unique_ptr<Process> &a, const std::unique_ptr<Process> &b)
-			  { return a->arrivalTime < b->arrivalTime; });
-}
 
 class FCFS : public Scheduler
 {
 private:
-	/* data */
+	MinHeap<std::unique_ptr<Process>> ready_queue;
 public:
-	void schedule();
-	FCFS(std::vector<std::unique_ptr<Process>> &processes) : Scheduler(processes){};
+	FCFS();
+	~FCFS();
+	std::vector<std::unique_ptr<Process>> schedule(time_unit &currentTime, std::shared_ptr<Logger> logger);
+	bool addToReadyQueue(std::unique_ptr<Process> &process);
 };
 
 class RR : public Scheduler

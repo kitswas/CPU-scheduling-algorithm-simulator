@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getprocesses_0',['getProcesses',['../classScheduler.html#a7e6c02d3ca224d3da116fbfd24b1c8ab',1,'Scheduler']]]
+  ['fcfs_0',['FCFS',['../classFCFS.html#a24ac88353e97327804b8d0d64f4d11bb',1,'FCFS']]]
 ];

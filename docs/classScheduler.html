@@ -92,7 +92,6 @@ $(document).ready(function(){initNavTree('classScheduler.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classScheduler-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Scheduler Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -113,27 +112,14 @@ Inheritance diagram for Scheduler:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa564689d54f6463f2707e3e9b36ac906"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#aa564689d54f6463f2707e3e9b36ac906">schedule</a> ()=0</td></tr>
 <tr class="separator:aa564689d54f6463f2707e3e9b36ac906"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a715b64de4088e13153d1fa4a5ceeec84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a715b64de4088e13153d1fa4a5ceeec84">sortProcessesByArrivalTime</a> ()</td></tr>
-<tr class="separator:a715b64de4088e13153d1fa4a5ceeec84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e6c02d3ca224d3da116fbfd24b1c8ab"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a7e6c02d3ca224d3da116fbfd24b1c8ab">getProcesses</a> () const</td></tr>
-<tr class="separator:a7e6c02d3ca224d3da116fbfd24b1c8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ea55aa06670953b17def806a717226b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a9ea55aa06670953b17def806a717226b">Scheduler</a> (std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt; &amp;<a class="el" href="classScheduler.html#ad0511b0d78d0f48832f61737d46310b3">processes</a>)</td></tr>
-<tr class="separator:a9ea55aa06670953b17def806a717226b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:ad0511b0d78d0f48832f61737d46310b3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#ad0511b0d78d0f48832f61737d46310b3">processes</a></td></tr>
-<tr class="separator:ad0511b0d78d0f48832f61737d46310b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abff7e9de6646d3f383bd4ed350d9b6fe"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#abff7e9de6646d3f383bd4ed350d9b6fe">numberOfProcesses</a></td></tr>
-<tr class="separator:abff7e9de6646d3f383bd4ed350d9b6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9e4ecb5c8295a6e2e5886d0f11651d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#aa9e4ecb5c8295a6e2e5886d0f11651d3">currentTime</a></td></tr>
-<tr class="separator:aa9e4ecb5c8295a6e2e5886d0f11651d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d2c1a0a0e7d88237e73f972e666230"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#ae2d2c1a0a0e7d88237e73f972e666230">addToReadyQueue</a> (std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &amp;process)=0</td></tr>
+<tr class="separator:ae2d2c1a0a0e7d88237e73f972e666230"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Abstract class for all scheduler types. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9ea55aa06670953b17def806a717226b" name="a9ea55aa06670953b17def806a717226b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ea55aa06670953b17def806a717226b">&#9670;&#160;</a></span>Scheduler()</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae2d2c1a0a0e7d88237e73f972e666230" name="ae2d2c1a0a0e7d88237e73f972e666230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2d2c1a0a0e7d88237e73f972e666230">&#9670;&#160;</a></span>addToReadyQueue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,45 +128,21 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Scheduler::Scheduler </td>
+          <td class="memname">virtual bool Scheduler::addToReadyQueue </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>processes</em></td><td>)</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>process</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7e6c02d3ca224d3da116fbfd24b1c8ab" name="a7e6c02d3ca224d3da116fbfd24b1c8ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e6c02d3ca224d3da116fbfd24b1c8ab">&#9670;&#160;</a></span>getProcesses()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt; &amp; Scheduler::getProcesses </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Implemented in <a class="el" href="classFCFS.html#a587883ead246a22a7014f4d94d669548">FCFS</a>.</p>
 
 </div>
 </div>
@@ -208,98 +170,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classFCFS.html#aa7749c9a4a889f01708f8e346f9b3779">FCFS</a>.</p>
-
-</div>
-</div>
-<a id="a715b64de4088e13153d1fa4a5ceeec84" name="a715b64de4088e13153d1fa4a5ceeec84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a715b64de4088e13153d1fa4a5ceeec84">&#9670;&#160;</a></span>sortProcessesByArrivalTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Scheduler::sortProcessesByArrivalTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="aa9e4ecb5c8295a6e2e5886d0f11651d3" name="aa9e4ecb5c8295a6e2e5886d0f11651d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9e4ecb5c8295a6e2e5886d0f11651d3">&#9670;&#160;</a></span>currentTime</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Scheduler::currentTime</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abff7e9de6646d3f383bd4ed350d9b6fe" name="abff7e9de6646d3f383bd4ed350d9b6fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abff7e9de6646d3f383bd4ed350d9b6fe">&#9670;&#160;</a></span>numberOfProcesses</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::size_t Scheduler::numberOfProcesses</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad0511b0d78d0f48832f61737d46310b3" name="ad0511b0d78d0f48832f61737d46310b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0511b0d78d0f48832f61737d46310b3">&#9670;&#160;</a></span>processes</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="classProcess.html">Process</a>&gt; &gt; Scheduler::processes</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bursttime_0',['burstTime',['../classProcess.html#a87e77da0b0a95ee337053cb5af9193d4',1,'Process']]]
+  ['bursttime_0',['burstTime',['../classProcess.html#a2c447789ec82e9e3ea0e29326f6b045e',1,'Process']]]
 ];

@@ -1,5 +1,6 @@
 var classMinHeap =
 [
+    [ "MinHeap", "classMinHeap.html#aed4b3ee7e85df01a8fbae181ee360dfe", null ],
     [ "MinHeap", "classMinHeap.html#a9f43b6981fd68150adb419e6b6fa4d71", null ],
     [ "~MinHeap", "classMinHeap.html#a2dceb520243ae2147320dfe96c63b737", null ],
     [ "buildHeap", "classMinHeap.html#a5927389d77170d47ca7f6212045698c5", null ],
