@@ -44,6 +44,8 @@ void Simulator::startSim(std::unique_ptr<Scheduler> scheduler, time_unit simulat
 		std::vector<std::unique_ptr<Process>> scheduled_processes = scheduler->schedule(currentTime, logger, quantum);
 		results.insert(results.end(), std::make_move_iterator(scheduled_processes.begin()), std::make_move_iterator(scheduled_processes.end()));
 	}
+	// sort results by pid
+	sortProcessesByPid(results);
 	// print results
 	std::cout << "Simulation complete\n";
 	std::cout << "PID\tAT\tBT\tCT\tTAT\tWT\tRT" << std::endl;
