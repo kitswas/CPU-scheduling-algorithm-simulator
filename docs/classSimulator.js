@@ -4,5 +4,5 @@ var classSimulator =
     [ "~Simulator", "classSimulator.html#a0f49aa04f42060a785adf77346b9de9f", null ],
     [ "getProcesses", "classSimulator.html#a8c02a82bed587ee676433d28289a3329", null ],
     [ "sortProcessesByArrivalTime", "classSimulator.html#aa3f1e3544b1ea0fb66b687e031193603", null ],
-    [ "startSim", "classSimulator.html#a29ad79461971c157cdf35ab9e3924df7", null ]
+    [ "startSim", "classSimulator.html#a8443869bad129650f83657b463400932", null ]
 ];
