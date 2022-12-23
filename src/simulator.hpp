@@ -3,6 +3,7 @@
 
 #include "process.hpp"
 #include "logger.hpp"
+#include "scheduler.hpp"
 #include <memory>
 #include <vector>
 #include <algorithm>
@@ -21,7 +22,7 @@ public:
 	~Simulator();
 	void sortProcessesByArrivalTime();
 	const std::vector<std::unique_ptr<Process>> &getProcesses() const;
-	void startSim(time_unit simulationTime, time_unit quantum);
+	void startSim(std::unique_ptr<Scheduler> scheduler, time_unit simulationTime, time_unit quantum);
 };
 
 inline const std::vector<std::unique_ptr<Process>> &Simulator::getProcesses() const

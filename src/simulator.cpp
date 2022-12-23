@@ -1,5 +1,4 @@
 #include "simulator.hpp"
-#include "scheduler.hpp"
 #include "printer.hpp"
 
 time_unit millis = 1;
@@ -15,9 +14,8 @@ Simulator::~Simulator()
 	processes.clear();
 }
 
-void Simulator::startSim(time_unit simulationTime, [[maybe_unused]] time_unit quantum)
+void Simulator::startSim(std::unique_ptr<Scheduler> scheduler, time_unit simulationTime, [[maybe_unused]] time_unit quantum)
 {
-	RR scheduler;
 	std::vector<std::unique_ptr<Process>> results;
 	logger = std::make_shared<Logger>("status.txt");
 	this->simulationTime += simulationTime;
@@ -35,7 +33,7 @@ void Simulator::startSim(time_unit simulationTime, [[maybe_unused]] time_unit qu
 			{
 				std::cout << "Process " << processes[0]->getPid() << " arrived at time " << currentTime << " milliseconds\n";
 				logger->log(currentTime, processes[0]->getPid(), "Arrived");
-				scheduler.addToReadyQueue(processes[0], currentTime);
+				scheduler->addToReadyQueue(processes[0], currentTime);
 				processes.erase(processes.begin());
 			}
 		}
@@ -43,7 +41,7 @@ void Simulator::startSim(time_unit simulationTime, [[maybe_unused]] time_unit qu
 		// {
 		// 	std::cout << "No more processes to schedule\n";
 		// }
-		std::vector<std::unique_ptr<Process>> scheduled_processes = scheduler.schedule(currentTime, logger, quantum);
+		std::vector<std::unique_ptr<Process>> scheduled_processes = scheduler->schedule(currentTime, logger, quantum);
 		results.insert(results.end(), std::make_move_iterator(scheduled_processes.begin()), std::make_move_iterator(scheduled_processes.end()));
 	}
 	// print results
