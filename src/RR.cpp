@@ -5,16 +5,16 @@
 
 std::ostream &operator<<(std::ostream &os, const RRProcess &rrprocess)
 {
-	return os << "Process: " << rrprocess.process->getPid() << ", Remaining Burst Time: " << rrprocess.remainingBurstTime << ", Start Time: " << rrprocess.startTime;
+	return os << "Process: " << rrprocess.process->getPid() << ", Remaining Burst Time: " << rrprocess.remainingBurstTime << ", Start Time: " << rrprocess.reentryTime;
 }
 
-int compareStartTime(const std::unique_ptr<RRProcess> &a, const std::unique_ptr<RRProcess> &b)
+int compareReentryTime(const std::unique_ptr<RRProcess> &a, const std::unique_ptr<RRProcess> &b)
 {
-	if (a->startTime < b->startTime)
+	if (a->reentryTime < b->reentryTime)
 	{
 		return -1;
 	}
-	else if (a->startTime > b->startTime)
+	else if (a->reentryTime > b->reentryTime)
 	{
 		return 1;
 	}
@@ -28,7 +28,7 @@ int compareStartTime(const std::unique_ptr<RRProcess> &a, const std::unique_ptr<
  * @brief A Round Robin (RR) scheduler
  *
  */
-RR::RR() : ready_queue(compareStartTime)
+RR::RR() : ready_queue(compareReentryTime)
 {
 }
 
@@ -49,7 +49,7 @@ std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::
 
 	if (currentProcess != nullptr)
 	{
-		if (currentProcess->remainingBurstTime > 0 && currentTime < (currentProcess->startTime + quantum))
+		if (currentProcess->remainingBurstTime > 0 && currentTime < (currentProcess->reentryTime + quantum))
 		{
 			currentProcess->remainingBurstTime--;
 		}
@@ -68,11 +68,13 @@ std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::
 			scheduled_processes.push_back(std::move(currentProcess->process));
 			currentProcess = nullptr;
 		}
-		else if (currentTime == (currentProcess->startTime + quantum))
+		else if (currentTime == (currentProcess->reentryTime + quantum))
 		{
 			// log preempted
 			std::cout << "Process " << currentProcess->process->getPid() << " preempted at time " << currentTime << " milliseconds\n";
 			logger->log(currentTime, currentProcess->process->getPid(), "Preempted");
+			// reinsert into ready queue
+			currentProcess->reentryTime = currentTime + 1; // +1 to reinsert after new arrivals at the same time
 			ready_queue.insert(std::move(currentProcess));
 			currentProcess = nullptr;
 		}
@@ -89,7 +91,7 @@ std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::
 				currentProcess->process->setStartTime(currentTime);
 				currentProcess->remainingBurstTime = currentProcess->process->getBurstTime();
 			}
-			currentProcess->startTime = currentTime;
+			currentProcess->reentryTime = currentTime;
 			// log start
 			std::cout << "Process " << currentProcess->process->getPid() << " started at time " << currentTime << " milliseconds\n";
 			logger->log(currentTime, currentProcess->process->getPid(), "Running");

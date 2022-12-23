@@ -34,7 +34,7 @@ struct RRProcess
 {
 	std::unique_ptr<Process> process;
 	time_unit remainingBurstTime;
-	time_unit startTime;
+	time_unit reentryTime;
 };
 
 std::ostream &operator<<(std::ostream &os, const RRProcess &rrprocess);
