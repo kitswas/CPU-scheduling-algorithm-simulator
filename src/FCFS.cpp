@@ -1,7 +1,4 @@
 #include "scheduler.hpp"
-#include "process.hpp"
-#include <memory>
-#include <vector>
 
 /**
  * @brief A First Come First Serve (FCFS) scheduler

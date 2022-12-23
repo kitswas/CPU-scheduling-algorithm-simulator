@@ -1,11 +1,7 @@
 #ifndef SIMULATOR_CLASS
 #define SIMULATOR_CLASS
 
-#include "process.hpp"
-#include "logger.hpp"
 #include "scheduler.hpp"
-#include <memory>
-#include <vector>
 #include <algorithm>
 
 class Simulator

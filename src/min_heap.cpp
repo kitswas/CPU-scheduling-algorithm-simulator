@@ -1,5 +1,3 @@
-#include "min_heap.hpp"
-#include "process.hpp"
 #include "scheduler.hpp"
 
 template class MinHeap<std::unique_ptr<Process>>;

@@ -1,7 +1,6 @@
 #ifndef PROCESS_CREATOR_H
 #define PROCESS_CREATOR_H
 
-#include <memory>
 #include <vector>
 #include "process.hpp"
 

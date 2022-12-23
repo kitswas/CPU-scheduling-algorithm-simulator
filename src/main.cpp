@@ -10,10 +10,7 @@
  * Comments _can_ be written in [**Markdown**](https://www.markdownguide.org/cheat-sheet/).
  */
 
-#include <iostream>
 #include "process_creator.hpp"
-#include "scheduler.hpp"
-#include "min_heap.hpp"
 #include "simulator.hpp"
 
 int main()

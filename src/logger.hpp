@@ -1,9 +1,7 @@
 #ifndef LOGGING_FACILITY
 #define LOGGING_FACILITY
 
-#include <iostream>
 #include <fstream>
-#include <string>
 
 #include "process.hpp"
 

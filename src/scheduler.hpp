@@ -1,7 +1,6 @@
 #ifndef SCHEDULER_CLASS
 #define SCHEDULER_CLASS
 
-#include "process.hpp"
 #include "min_heap.hpp"
 #include "logger.hpp"
 

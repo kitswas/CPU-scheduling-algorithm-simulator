@@ -1,7 +1,4 @@
 #include "scheduler.hpp"
-#include "process.hpp"
-#include <memory>
-#include <vector>
 
 std::ostream &operator<<(std::ostream &os, const RRProcess &rrprocess)
 {
