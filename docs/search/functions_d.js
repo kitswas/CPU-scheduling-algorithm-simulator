@@ -9,5 +9,6 @@ var searchData=
   ['setwaitingtime_6',['setWaitingTime',['../classProcess.html#a6e89d93a40084e962fe6b9320b968247',1,'Process']]],
   ['simulator_7',['Simulator',['../classSimulator.html#afd473ecaec09d40bf0d4b826d334f178',1,'Simulator']]],
   ['sortprocessesbyarrivaltime_8',['sortProcessesByArrivalTime',['../classSimulator.html#aa3f1e3544b1ea0fb66b687e031193603',1,'Simulator']]],
-  ['startsim_9',['startSim',['../classSimulator.html#a8443869bad129650f83657b463400932',1,'Simulator']]]
+  ['sortprocessesbypid_9',['sortProcessesByPid',['../classSimulator.html#a3f27898006dbcf180b218c2f18d1166a',1,'Simulator']]],
+  ['startsim_10',['startSim',['../classSimulator.html#a8443869bad129650f83657b463400932',1,'Simulator']]]
 ];

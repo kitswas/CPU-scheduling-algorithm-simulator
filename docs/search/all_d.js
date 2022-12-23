@@ -14,5 +14,6 @@ var searchData=
   ['simulator_2ecpp_11',['simulator.cpp',['../simulator_8cpp.html',1,'']]],
   ['simulator_2ehpp_12',['simulator.hpp',['../simulator_8hpp.html',1,'']]],
   ['sortprocessesbyarrivaltime_13',['sortProcessesByArrivalTime',['../classSimulator.html#aa3f1e3544b1ea0fb66b687e031193603',1,'Simulator']]],
-  ['startsim_14',['startSim',['../classSimulator.html#a8443869bad129650f83657b463400932',1,'Simulator']]]
+  ['sortprocessesbypid_14',['sortProcessesByPid',['../classSimulator.html#a3f27898006dbcf180b218c2f18d1166a',1,'Simulator']]],
+  ['startsim_15',['startSim',['../classSimulator.html#a8443869bad129650f83657b463400932',1,'Simulator']]]
 ];
