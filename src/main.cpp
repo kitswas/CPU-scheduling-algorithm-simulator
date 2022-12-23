@@ -35,6 +35,6 @@ int main()
 	{
 		std::cout << *process << std::endl;
 	}
-	sim.startSim(50);
+	sim.startSim(100, 2);
 	return 0;
 }

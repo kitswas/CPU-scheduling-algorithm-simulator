@@ -13,14 +13,14 @@ FCFS::FCFS() : ready_queue(compareArrivalTime)
 
 FCFS::~FCFS() {}
 
-bool FCFS::addToReadyQueue(std::unique_ptr<Process> &process)
+bool FCFS::addToReadyQueue(std::unique_ptr<Process> &process, [[maybe_unused]] time_unit _currentTime)
 {
 	ready_queue.insert(std::move(process));
 	// std::cout << "FCFS::addToReadyQueue() called\n"; // debugging only
 	return true;
 }
 
-std::vector<std::unique_ptr<Process>> FCFS::schedule(time_unit &currentTime, std::shared_ptr<Logger> logger)
+std::vector<std::unique_ptr<Process>> FCFS::schedule(time_unit &currentTime, std::shared_ptr<Logger> logger, [[maybe_unused]] time_unit quantum)
 {
 	std::vector<std::unique_ptr<Process>> scheduled_processes;
 	static time_unit currentProcessRemainingTime = 0;
