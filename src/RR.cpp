@@ -8,6 +8,12 @@ std::ostream &operator<<(std::ostream &os, const RRProcess &rrprocess)
 	return os << "Process: " << rrprocess.process->getPid() << ", Remaining Burst Time: " << rrprocess.remainingBurstTime << ", Start Time: " << rrprocess.reentryTime;
 }
 
+/**
+ * @brief Compare two RRProcess objects by their reentry time. If the reentry times are equal, compare by arrival time.
+ *
+ * @return `-1` if `a < b`, `1` if `a > b`, otherwise by arrival time,
+ * `-2` if `a < b`, `2` if `a > b`, `0` if `a == b`
+ */
 int compareReentryTime(const std::unique_ptr<RRProcess> &a, const std::unique_ptr<RRProcess> &b)
 {
 	if (a->reentryTime < b->reentryTime)
@@ -20,7 +26,18 @@ int compareReentryTime(const std::unique_ptr<RRProcess> &a, const std::unique_pt
 	}
 	else
 	{
-		return 0;
+		if (a->process->getArrivalTime() < b->process->getArrivalTime())
+		{
+			return -2;
+		}
+		else if (a->process->getArrivalTime() > b->process->getArrivalTime())
+		{
+			return 2;
+		}
+		else
+		{
+			return 0;
+		}
 	}
 }
 
@@ -74,7 +91,7 @@ std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::
 			std::cout << "Process " << currentProcess->process->getPid() << " preempted at time " << currentTime << " milliseconds\n";
 			logger->log(currentTime, currentProcess->process->getPid(), "Preempted");
 			// reinsert into ready queue
-			currentProcess->reentryTime = currentTime + 1; // +1 to reinsert after new arrivals at the same time
+			currentProcess->reentryTime = currentTime;
 			ready_queue.insert(std::move(currentProcess));
 			currentProcess = nullptr;
 		}
