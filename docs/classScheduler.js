@@ -1,5 +1,5 @@
 var classScheduler =
 [
-    [ "addToReadyQueue", "classScheduler.html#ae2d2c1a0a0e7d88237e73f972e666230", null ],
-    [ "schedule", "classScheduler.html#a32b7a73e3cbd6823bc80413614b23545", null ]
+    [ "addToReadyQueue", "classScheduler.html#acae98d33b7ae3e0d09a38fec89703ebf", null ],
+    [ "schedule", "classScheduler.html#a4f32400f96433a3bec7a8b39d5c662fe", null ]
 ];

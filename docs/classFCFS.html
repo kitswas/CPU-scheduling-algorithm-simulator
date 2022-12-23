@@ -118,14 +118,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a24ac88353e97327804b8d0d64f4d11bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e2706d189845519bf9b71263e4a20ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFCFS.html#a7e2706d189845519bf9b71263e4a20ef">~FCFS</a> ()</td></tr>
 <tr class="separator:a7e2706d189845519bf9b71263e4a20ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a038d3fb6eda8c7761cad76aeb6364d28"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFCFS.html#a038d3fb6eda8c7761cad76aeb6364d28">schedule</a> (<a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> &amp;currentTime, std::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt; logger)</td></tr>
-<tr class="separator:a038d3fb6eda8c7761cad76aeb6364d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a587883ead246a22a7014f4d94d669548"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFCFS.html#a587883ead246a22a7014f4d94d669548">addToReadyQueue</a> (std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &amp;process)</td></tr>
-<tr class="separator:a587883ead246a22a7014f4d94d669548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32b7a73e3cbd6823bc80413614b23545"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a32b7a73e3cbd6823bc80413614b23545">schedule</a> (<a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> &amp;currentTime, std::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt; logger)=0</td></tr>
-<tr class="separator:a32b7a73e3cbd6823bc80413614b23545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2d2c1a0a0e7d88237e73f972e666230"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#ae2d2c1a0a0e7d88237e73f972e666230">addToReadyQueue</a> (std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &amp;process)=0</td></tr>
-<tr class="separator:ae2d2c1a0a0e7d88237e73f972e666230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af563e6702383c0d179f19fa887751fdf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFCFS.html#af563e6702383c0d179f19fa887751fdf">schedule</a> (<a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> &amp;currentTime, std::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt; logger, <a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> quantum=-1)</td></tr>
+<tr class="separator:af563e6702383c0d179f19fa887751fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a84f690dcb126c517d6a6394b169d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFCFS.html#aa4a84f690dcb126c517d6a6394b169d3">addToReadyQueue</a> (std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &amp;process, <a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> _currentTime=-1)</td></tr>
+<tr class="separator:aa4a84f690dcb126c517d6a6394b169d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f32400f96433a3bec7a8b39d5c662fe"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a4f32400f96433a3bec7a8b39d5c662fe">schedule</a> (<a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> &amp;currentTime, std::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt; logger, <a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> quantum)=0</td></tr>
+<tr class="separator:a4f32400f96433a3bec7a8b39d5c662fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae98d33b7ae3e0d09a38fec89703ebf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#acae98d33b7ae3e0d09a38fec89703ebf">addToReadyQueue</a> (std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &amp;process, <a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> currentTime)=0</td></tr>
+<tr class="separator:acae98d33b7ae3e0d09a38fec89703ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a24ac88353e97327804b8d0d64f4d11bb" name="a24ac88353e97327804b8d0d64f4d11bb"></a>
@@ -165,8 +165,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a587883ead246a22a7014f4d94d669548" name="a587883ead246a22a7014f4d94d669548"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a587883ead246a22a7014f4d94d669548">&#9670;&#160;</a></span>addToReadyQueue()</h2>
+<a id="aa4a84f690dcb126c517d6a6394b169d3" name="aa4a84f690dcb126c517d6a6394b169d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a84f690dcb126c517d6a6394b169d3">&#9670;&#160;</a></span>addToReadyQueue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,8 +178,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool FCFS::addToReadyQueue </td>
           <td>(</td>
           <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>process</em></td><td>)</td>
+          <td class="paramname"><em>process</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a>&#160;</td>
+          <td class="paramname"><em>_currentTime</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -189,12 +199,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classScheduler.html#ae2d2c1a0a0e7d88237e73f972e666230">Scheduler</a>.</p>
+<p>Implements <a class="el" href="classScheduler.html#acae98d33b7ae3e0d09a38fec89703ebf">Scheduler</a>.</p>
 
 </div>
 </div>
-<a id="a038d3fb6eda8c7761cad76aeb6364d28" name="a038d3fb6eda8c7761cad76aeb6364d28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a038d3fb6eda8c7761cad76aeb6364d28">&#9670;&#160;</a></span>schedule()</h2>
+<a id="af563e6702383c0d179f19fa887751fdf" name="af563e6702383c0d179f19fa887751fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af563e6702383c0d179f19fa887751fdf">&#9670;&#160;</a></span>schedule()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +222,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt;&#160;</td>
-          <td class="paramname"><em>logger</em>&#160;</td>
+          <td class="paramname"><em>logger</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a>&#160;</td>
+          <td class="paramname"><em>quantum</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -227,7 +243,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classScheduler.html#a32b7a73e3cbd6823bc80413614b23545">Scheduler</a>.</p>
+<p>Implements <a class="el" href="classScheduler.html#a4f32400f96433a3bec7a8b39d5c662fe">Scheduler</a>.</p>
 
 </div>
 </div>

@@ -7,7 +7,8 @@ var annotated_dup =
     [ "MinHeap", "classMinHeap.html", "classMinHeap" ],
     [ "Process", "classProcess.html", "classProcess" ],
     [ "ProcessCreator", "classProcessCreator.html", null ],
-    [ "RR", "classRR.html", null ],
+    [ "RR", "classRR.html", "classRR" ],
+    [ "RRProcess", "structRRProcess.html", "structRRProcess" ],
     [ "Scheduler", "classScheduler.html", "classScheduler" ],
     [ "Simulator", "classSimulator.html", "classSimulator" ]
 ];
