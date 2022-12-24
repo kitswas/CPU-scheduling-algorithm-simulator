@@ -5,5 +5,5 @@ var searchData=
   ['remainingbursttime_2',['remainingBurstTime',['../structRRProcess.html#abc32d196f2bc4e6b691601ff4a6f62e8',1,'RRProcess']]],
   ['rr_3',['RR',['../classRR.html',1,'RR'],['../classRR.html#ad61ece80687d975ead0844d2687e4024',1,'RR::RR()']]],
   ['rr_2ecpp_4',['RR.cpp',['../RR_8cpp.html',1,'']]],
-  ['rrprocess_5',['RRProcess',['../structRRProcess.html',1,'']]]
+  ['rrprocess_5',['RRProcess',['../structRRProcess.html',1,'RRProcess'],['../structRRProcess.html#af38ca0e052995d03f24fc8c19153e649',1,'RRProcess::RRProcess()']]]
 ];

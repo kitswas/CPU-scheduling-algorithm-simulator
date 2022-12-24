@@ -73,8 +73,8 @@ var NAVTREEINDEX0 =
 "globals_type.html":[2,1,3],
 "globals_vars.html":[2,1,2],
 "hierarchy.html":[1,2],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "index.html#autotoc_md1":[0,0],
 "index.html#autotoc_md2":[0,1],
 "index.html#autotoc_md3":[0,2],
@@ -111,7 +111,8 @@ var NAVTREEINDEX0 =
 "simulator_8hpp.html":[2,0,0,14],
 "simulator_8hpp_source.html":[2,0,0,14],
 "structRRProcess.html":[1,0,8],
-"structRRProcess.html#a8740f31ef8ba5f398e7c6fb6e2604755":[1,0,8,0],
-"structRRProcess.html#a991c203a8f708d2c39d9bb89f762b722":[1,0,8,1],
-"structRRProcess.html#abc32d196f2bc4e6b691601ff4a6f62e8":[1,0,8,2]
+"structRRProcess.html#a8740f31ef8ba5f398e7c6fb6e2604755":[1,0,8,1],
+"structRRProcess.html#a991c203a8f708d2c39d9bb89f762b722":[1,0,8,2],
+"structRRProcess.html#abc32d196f2bc4e6b691601ff4a6f62e8":[1,0,8,3],
+"structRRProcess.html#af38ca0e052995d03f24fc8c19153e649":[1,0,8,0]
 };
