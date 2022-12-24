@@ -18,6 +18,7 @@ set(SOURCES
 	src/min_heap.cpp
 	src/simulator.cpp
 	src/printer.cpp
-	src/RR.cpp)
+	src/RR.cpp
+	src/rbtree.cpp)
 
 add_executable(executable ${SOURCES})
