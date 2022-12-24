@@ -55,7 +55,6 @@ bool RR::addToReadyQueue(std::unique_ptr<Process> &process, time_unit currentTim
 	return true;
 }
 
-// TODO: implement this
 std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::shared_ptr<Logger> logger, time_unit quantum)
 {
 	std::vector<std::unique_ptr<Process>> scheduled_processes;
