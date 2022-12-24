@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(CPP_project)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 
 # Some compiler flags for GCC and Clang
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang" OR "${CMAKE_CXX_COMPILER_ID}" MATCHES "GNU") 
