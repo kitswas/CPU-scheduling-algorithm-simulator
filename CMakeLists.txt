@@ -10,5 +10,14 @@ if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang" OR "${CMAKE_CXX_COMPILER_ID}" MATC
 	set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3 -s -DNDEBUG")
 endif()
 
-set(SOURCES src/main.cpp src/process.cpp src/process_creator.cpp src/FCFS.cpp src/min_heap.cpp src/simulator.cpp src/printer.cpp src/RR.cpp)
+set(SOURCES
+	src/main.cpp
+	src/process.cpp
+	src/process_creator.cpp
+	src/FCFS.cpp
+	src/min_heap.cpp
+	src/simulator.cpp
+	src/printer.cpp
+	src/RR.cpp)
+
 add_executable(executable ${SOURCES})
