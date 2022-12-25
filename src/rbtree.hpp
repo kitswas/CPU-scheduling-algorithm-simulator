@@ -27,10 +27,12 @@ private:
 		std::shared_ptr<Node> right;
 		std::shared_ptr<Node> parent;
 		bool isRed;
+		Node() = default;
 		Node(const T &data, std::shared_ptr<Node> parent) : data(data), left(nullptr), right(nullptr), parent(parent), isRed(true) {}
 	};
 
 	std::shared_ptr<Node> root;
+	std::shared_ptr<Node> nil;
 	int (*compare)(const T &a, const T &b);
 	size_t elements;
 
@@ -57,6 +59,8 @@ public:
 	 * @param data The element to insert
 	 */
 	void insert(const T &data);
+
+	void insertFixup(std::shared_ptr<Node> node);
 
 	/**
 	 * @brief Remove an element from the tree
