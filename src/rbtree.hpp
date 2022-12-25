@@ -62,12 +62,16 @@ public:
 
 	void insertFixup(std::shared_ptr<Node> node);
 
+	void transplant(std::shared_ptr<Node> u, std::shared_ptr<Node> v);
+
 	/**
 	 * @brief Remove an element from the tree
 	 *
-	 * @param data The element to remove
+	 * @param node The element to remove
 	 */
-	void remove(const T &data);
+	void remove(std::shared_ptr<Node> node);
+
+	void removeFixup(std::shared_ptr<Node> node);
 
 	/**
 	 * @brief Check if the tree contains an element

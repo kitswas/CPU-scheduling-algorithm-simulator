@@ -204,3 +204,144 @@ void RBTree<T>::insertFixup(std::shared_ptr<Node> node)
 	}
 	this->root->isRed = false;
 }
+
+template <typename T>
+void RBTree<T>::transplant(std::shared_ptr<Node> u, std::shared_ptr<Node> v)
+{
+	if (u->parent == this->nil)
+	{
+		this->root = v;
+	}
+	else if (u == u->parent->left)
+	{
+		u->parent->left = v;
+	}
+	else
+	{
+		u->parent->right = v;
+	}
+	v->parent = u->parent;
+}
+
+/**
+ * @brief Remove a node from the tree
+ *
+ * @details
+ * @tparam T
+ * @param node
+ */
+template <typename T>
+void RBTree<T>::remove(std::shared_ptr<Node> node)
+{
+	std::shared_ptr<Node> y = node;
+	std::shared_ptr<Node> x;
+	bool yOriginallyWasRed = y->isRed;
+	if (node->left == this->nil)
+	{
+		x = node->right;
+		this->transplant(node, node->right);
+	}
+	else if (node->right == this->nil)
+	{
+		x = node->left;
+		this->transplant(node, node->left);
+	}
+	else
+	{
+		y = this->minimum(node->right);
+		yOriginallyWasRed = y->isRed;
+		x = y->right;
+		if (y->parent == node)
+		{
+			x->parent = y;
+		}
+		else
+		{
+			this->transplant(y, y->right);
+			y->right = node->right;
+			y->right->parent = y;
+		}
+		this->transplant(node, y);
+		y->left = node->left;
+		y->left->parent = y;
+		y->isRed = node->isRed;
+	}
+	if (!yOriginallyWasRed)
+	{
+		this->removeFixup(x);
+	}
+	this->elements--;
+}
+
+template <typename T>
+void RBTree<T>::removeFixup(std::shared_ptr<Node> node)
+{
+	while (node != this->root && !node->isRed)
+	{
+		if (node == node->parent->left)
+		{
+			std::shared_ptr<Node> sibling = node->parent->right;
+			if (sibling->isRed) // Case 1
+			{
+				sibling->isRed = false;
+				node->parent->isRed = true;
+				this->leftRotate(node->parent);
+				sibling = node->parent->right;
+			}
+			if (!sibling->left->isRed && !sibling->right->isRed) // Case 2
+			{
+				sibling->isRed = true;
+				node = node->parent;
+			}
+			else
+			{
+				if (!sibling->right->isRed) // Case 3
+				{
+					sibling->left->isRed = false;
+					sibling->isRed = true;
+					this->rightRotate(sibling);
+					sibling = node->parent->right;
+				}
+				// Case 4
+				sibling->isRed = node->parent->isRed;
+				node->parent->isRed = false;
+				sibling->right->isRed = false;
+				this->leftRotate(node->parent);
+				node = this->root;
+			}
+		}
+		else
+		{
+			std::shared_ptr<Node> sibling = node->parent->left;
+			if (sibling->isRed) // Case 1
+			{
+				sibling->isRed = false;
+				node->parent->isRed = true;
+				this->rightRotate(node->parent);
+				sibling = node->parent->left;
+			}
+			if (!sibling->right->isRed && !sibling->left->isRed) // Case 2
+			{
+				sibling->isRed = true;
+				node = node->parent;
+			}
+			else
+			{
+				if (!sibling->left->isRed) // Case 3
+				{
+					sibling->right->isRed = false;
+					sibling->isRed = true;
+					this->leftRotate(sibling);
+					sibling = node->parent->left;
+				}
+				// Case 4
+				sibling->isRed = node->parent->isRed;
+				node->parent->isRed = false;
+				sibling->left->isRed = false;
+				this->rightRotate(node->parent);
+				node = this->root;
+			}
+		}
+	}
+	node->isRed = false;
+}
