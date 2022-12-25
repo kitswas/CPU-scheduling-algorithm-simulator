@@ -1,7 +1,3 @@
-/**
- * Reference: https://www.programiz.com/dsa/red-black-tree
- */
-
 #include "rbtree.hpp"
 
 template <typename T>

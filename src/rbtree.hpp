@@ -1,3 +1,10 @@
+/**
+ * References: 
+ * 1. https://www.programiz.com/dsa/red-black-tree
+ * 2. Cormen, Leiserson, Rivest, and Stein; Introduction to Algorithms (MIT Press, 2009)
+ * 3. https://www.boost.org/doc/libs/1_81_0/doc/html/intrusive/reference.html#header.boost.intrusive.rbtree_hpp
+ */
+
 #ifndef RBTREE_H
 #define RBTREE_H
 
