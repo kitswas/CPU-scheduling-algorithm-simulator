@@ -371,49 +371,22 @@ T RBTree<T>::extractMin()
 }
 
 template <typename T>
-void RBTree<T>::printPreorder(std::shared_ptr<Node> node)
+void RBTree<T>::printPreorder() const
 {
-	if (node == nullptr)
-	{
-		std::cout << "Printing the preorder traversal\n";
-		printPreorder(this->root);
-	}
-	if (node != this->nil)
-	{
-		std::cout << *(node->data) << "\t" << (node->isRed ? "R" : "B") << '\n';
-		this->printPreorder(node->left);
-		this->printPreorder(node->right);
-	}
+	std::cout << "Printing the preorder traversal\n";
+	_printPreorder(this->root);
 }
 
 template <typename T>
-void RBTree<T>::printInorder(std::shared_ptr<Node> node)
+void RBTree<T>::printInorder() const
 {
-	if (node == nullptr)
-	{
-		std::cout << "Printing the inorder traversal\n";
-		printInorder(this->root);
-	}
-	if (node != this->nil)
-	{
-		this->printInorder(node->left);
-		std::cout << *(node->data) << "\t" << (node->isRed ? "R" : "B") << '\n';
-		this->printInorder(node->right);
-	}
+	std::cout << "Printing the inorder traversal\n";
+	_printInorder(this->root);
 }
 
 template <typename T>
-void RBTree<T>::printPostorder(std::shared_ptr<Node> node)
+void RBTree<T>::printPostorder() const
 {
-	if (node == nullptr)
-	{
-		std::cout << "Printing the postorder traversal\n";
-		printPostorder(this->root);
-	}
-	if (node != this->nil)
-	{
-		this->printPostorder(node->left);
-		this->printPostorder(node->right);
-		std::cout << *(node->data) << "\t" << (node->isRed ? "R" : "B") << '\n';
-	}
+	std::cout << "Printing the postorder traversal\n";
+	_printPostorder(this->root);
 }

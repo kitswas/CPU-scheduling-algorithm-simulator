@@ -49,6 +49,33 @@ private:
 		}
 		return min;
 	}
+	void _printPreorder(const std::shared_ptr<Node> &node) const
+	{
+		if (node != this->nil)
+		{
+			std::cout << *(node->data) << "\t" << (node->isRed ? "R" : "B") << '\n';
+			this->_printPreorder(node->left);
+			this->_printPreorder(node->right);
+		}
+	}
+	void _printInorder(const std::shared_ptr<Node> &node) const
+	{
+		if (node != this->nil)
+		{
+			this->_printInorder(node->left);
+			std::cout << *(node->data) << "\t" << (node->isRed ? "R" : "B") << '\n';
+			this->_printInorder(node->right);
+		}
+	}
+	void _printPostorder(const std::shared_ptr<Node> &node) const
+	{
+		if (node != this->nil)
+		{
+			this->_printPostorder(node->left);
+			this->_printPostorder(node->right);
+			std::cout << *(node->data) << "\t" << (node->isRed ? "R" : "B") << '\n';
+		}
+	}
 
 public:
 	/**
@@ -105,19 +132,19 @@ public:
 	 * @brief Print preorder traversal of the tree
 	 *
 	 */
-	void printPreorder(std::shared_ptr<Node> node = nullptr);
+	void printPreorder() const;
 
 	/**
 	 * @brief Print inorder traversal of the tree
 	 *
 	 */
-	void printInorder(std::shared_ptr<Node> node = nullptr);
+	void printInorder() const;
 
 	/**
 	 * @brief Print postorder traversal of the tree
 	 *
 	 */
-	void printPostorder(std::shared_ptr<Node> node = nullptr);
+	void printPostorder() const;
 };
 
 #endif // RBTREE_H

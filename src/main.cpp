@@ -38,7 +38,10 @@ int main()
 		tree.insert(processes[0]);
 		processes.erase(processes.begin());
 	}
+	std::cout << "Tree created" << std::endl;
 	tree.printInorder();
+	tree.printPreorder();
+	tree.printPostorder();
 
 	// sim.startSim(std::make_unique<RR>(), 100, 2); // debugging only
 
