@@ -1,7 +1,4 @@
 #include "rbtree.hpp"
-#include "process.hpp"
-
-template class RBTree<std::unique_ptr<Process>>;
 
 template <typename T>
 RBTree<T>::RBTree(int (*comparator)(const T &a, const T &b))
