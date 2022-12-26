@@ -96,7 +96,7 @@ public:
 	 *
 	 * @param data The element to insert
 	 */
-	void insert(T &data);
+	void insert(T data);
 
 	/**
 	 * @brief Remove an element from the tree

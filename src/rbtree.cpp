@@ -107,7 +107,7 @@ void RBTree<T>::rightRotate(std::shared_ptr<Node> node)
  * @param data
  */
 template <typename T>
-void RBTree<T>::insert(T &data)
+void RBTree<T>::insert(T data)
 {
 	std::shared_ptr<Node> node = std::make_shared<Node>(std::move(data), this->nil);
 	std::shared_ptr<Node> parent = this->nil;
