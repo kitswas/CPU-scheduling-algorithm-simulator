@@ -19,6 +19,7 @@ set(SOURCES
 	src/simulator.cpp
 	src/printer.cpp
 	src/RR.cpp
-	src/rbtree.cpp)
+	src/rbtree.cpp
+	src/CFS.cpp)
 
 add_executable(executable ${SOURCES})
