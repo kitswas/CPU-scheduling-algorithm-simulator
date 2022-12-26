@@ -1,5 +1,5 @@
 /**
- * References: 
+ * References:
  * 1. https://www.programiz.com/dsa/red-black-tree
  * 2. Cormen, Leiserson, Rivest, and Stein; Introduction to Algorithms (MIT Press, 2009)
  * 3. https://www.boost.org/doc/libs/1_81_0/doc/html/intrusive/reference.html#header.boost.intrusive.rbtree_hpp
@@ -28,7 +28,7 @@ private:
 		std::shared_ptr<Node> parent;
 		bool isRed;
 		Node() = default;
-		Node(const T &data, std::shared_ptr<Node> parent) : data(data), left(nullptr), right(nullptr), parent(parent), isRed(true) {}
+		Node(T data, std::shared_ptr<Node> parent) : data(std::move(data)), left(nullptr), right(nullptr), parent(parent), isRed(true) {}
 	};
 
 	std::shared_ptr<Node> root;
@@ -38,6 +38,17 @@ private:
 
 	void leftRotate(std::shared_ptr<Node> node);
 	void rightRotate(std::shared_ptr<Node> node);
+	void insertFixup(std::shared_ptr<Node> node);
+	void transplant(std::shared_ptr<Node> u, std::shared_ptr<Node> v);
+	void removeFixup(std::shared_ptr<Node> node);
+	inline std::shared_ptr<Node> minimum(std::shared_ptr<Node> min)
+	{
+		while (min->left != this->nil)
+		{
+			min = min->left;
+		}
+		return min;
+	}
 
 public:
 	/**
@@ -58,11 +69,7 @@ public:
 	 *
 	 * @param data The element to insert
 	 */
-	void insert(const T &data);
-
-	void insertFixup(std::shared_ptr<Node> node);
-
-	void transplant(std::shared_ptr<Node> u, std::shared_ptr<Node> v);
+	void insert(T &data);
 
 	/**
 	 * @brief Remove an element from the tree
@@ -71,8 +78,6 @@ public:
 	 */
 	void remove(std::shared_ptr<Node> node);
 
-	void removeFixup(std::shared_ptr<Node> node);
-
 	/**
 	 * @brief Check if the tree contains an element
 	 *
@@ -80,7 +85,7 @@ public:
 	 * @return true If the tree contains the element
 	 * @return false If the tree does not contain the element
 	 */
-	bool contains(const T &data);
+	// bool contains(T &data);
 
 	/**
 	 * @brief Get the number of elements in the tree
@@ -88,13 +93,6 @@ public:
 	 * @return size_t The number of elements in the tree
 	 */
 	size_t size();
-
-	/**
-	 * @brief Get the height of the tree
-	 *
-	 * @return size_t The height of the tree
-	 */
-	size_t height();
 
 	/**
 	 * @brief Extract the minimum element from the tree
@@ -107,19 +105,19 @@ public:
 	 * @brief Print preorder traversal of the tree
 	 *
 	 */
-	void printPreorder();
+	void printPreorder(std::shared_ptr<Node> node = nullptr);
 
 	/**
 	 * @brief Print inorder traversal of the tree
 	 *
 	 */
-	void printInorder();
+	void printInorder(std::shared_ptr<Node> node = nullptr);
 
 	/**
 	 * @brief Print postorder traversal of the tree
 	 *
 	 */
-	void printPostorder();
+	void printPostorder(std::shared_ptr<Node> node = nullptr);
 };
 
 #endif // RBTREE_H

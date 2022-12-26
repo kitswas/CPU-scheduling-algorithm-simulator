@@ -11,6 +11,8 @@ RBTree<T>::RBTree(int (*comparator)(const T &a, const T &b))
 	this->nil->right = nullptr;
 	this->nil->parent = nullptr;
 	this->nil->isRed = false;
+
+	this->root = this->nil;
 }
 
 template <typename T>
@@ -102,18 +104,18 @@ void RBTree<T>::rightRotate(std::shared_ptr<Node> node)
  * @details
  *
  * @tparam T
- * @param value
+ * @param data
  */
 template <typename T>
-void RBTree<T>::insert(const T &value)
+void RBTree<T>::insert(T &data)
 {
-	std::shared_ptr<Node> node = std::make_shared<Node>(value);
+	std::shared_ptr<Node> node = std::make_shared<Node>(std::move(data), this->nil);
 	std::shared_ptr<Node> parent = this->nil;
 	std::shared_ptr<Node> current = this->root;
 	while (current != this->nil) // Traverse till we hit a leaf
 	{
 		parent = current;
-		if (this->compare(value, current->value) < 0)
+		if (this->compare(node->data, current->data) < 0)
 		{
 			current = current->left;
 		}
@@ -127,7 +129,7 @@ void RBTree<T>::insert(const T &value)
 	{
 		this->root = node;
 	}
-	else if (this->compare(value, parent->value) < 0)
+	else if (this->compare(node->data, parent->data) < 0)
 	{
 		parent->left = node;
 	}
@@ -344,4 +346,71 @@ void RBTree<T>::removeFixup(std::shared_ptr<Node> node)
 		}
 	}
 	node->isRed = false;
+}
+
+template <typename T>
+inline size_t RBTree<T>::size()
+{
+	return elements;
+}
+
+template <typename T>
+T RBTree<T>::extractMin()
+{
+	if (this->root != this->nil)
+	{
+		std::shared_ptr<Node> min = this->minimum(this->root);
+		T data = std::move(min->data);
+		this->remove(min);
+		return data;
+	}
+	throw std::runtime_error("Tree is empty! Cannot extract minimum.");
+}
+
+template <typename T>
+void RBTree<T>::printPreorder(std::shared_ptr<Node> node)
+{
+	if (node == nullptr)
+	{
+		std::cout << "Printing the preorder traversal\n";
+		printPreorder(this->root);
+	}
+	if (node != this->nil)
+	{
+		std::cout << *(node->data) << "\t" << (node->isRed ? "R" : "B") << '\n';
+		this->printPreorder(node->left);
+		this->printPreorder(node->right);
+	}
+}
+
+template <typename T>
+void RBTree<T>::printInorder(std::shared_ptr<Node> node)
+{
+	if (node == nullptr)
+	{
+		std::cout << "Printing the inorder traversal\n";
+		printInorder(this->root);
+	}
+	if (node != this->nil)
+	{
+		this->printInorder(node->left);
+		std::cout << *(node->data) << "\t" << (node->isRed ? "R" : "B") << '\n';
+		this->printInorder(node->right);
+	}
+}
+
+template <typename T>
+void RBTree<T>::printPostorder(std::shared_ptr<Node> node)
+{
+	if (node == nullptr)
+	{
+		std::cout << "Printing the postorder traversal\n";
+		printPostorder(this->root);
+	}
+	if (node != this->nil)
+	{
+		this->printPostorder(node->left);
+		this->printPostorder(node->right);
+		std::cout << *(node->data) << "\t" << (node->isRed ? "R" : "B") << '\n';
+	}
 }
