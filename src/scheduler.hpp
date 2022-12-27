@@ -56,6 +56,8 @@ struct CFSProcess
 {
 	std::unique_ptr<Process> process;
 	time_unit vruntime;
+	time_unit remainingBurstTime;
+	time_unit reentryTime;
 	CFSProcess(std::unique_ptr<Process> process, time_unit vruntime) : process(std::move(process)), vruntime(vruntime) {}
 };
 
@@ -69,7 +71,7 @@ private:
 public:
 	CFS();
 	~CFS();
-	std::vector<std::unique_ptr<Process>> schedule(time_unit &currentTime, std::shared_ptr<Logger> logger, time_unit quantum = -1);
+	std::vector<std::unique_ptr<Process>> schedule(time_unit &currentTime, std::shared_ptr<Logger> logger, time_unit quantum);
 	bool addToReadyQueue(std::unique_ptr<Process> &process, time_unit _currentTime = -1);
 };
 

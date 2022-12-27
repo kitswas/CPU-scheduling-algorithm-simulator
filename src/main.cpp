@@ -35,9 +35,9 @@ int main()
 
 	// Ask the user for the scheduler type
 	int scheduler_type;
-	std::cout << "Choose a scheduler type:\n1. FCFS\n2. RR\n";
+	std::cout << "Choose a scheduler type:\n1. FCFS\n2. RR\n3. CFS\n";
 	std::cin >> scheduler_type;
-	std::unique_ptr<Scheduler> scheduler;
+	std::unique_ptr<Scheduler> scheduler; // must be a pointer to prevent slicing
 	switch (scheduler_type)
 	{
 	case 1:
@@ -45,6 +45,9 @@ int main()
 		break;
 	case 2:
 		scheduler = std::make_unique<RR>();
+		break;
+	case 3:
+		scheduler = std::make_unique<CFS>();
 		break;
 	default:
 		std::cout << "Invalid choice. Exiting...\n";
@@ -59,6 +62,7 @@ int main()
 	switch (scheduler_type)
 	{
 	case 2:
+	case 3:
 		std::cout << "Enter the time slice (quantum) in milliseconds: ";
 		std::cin >> quantum;
 	}
