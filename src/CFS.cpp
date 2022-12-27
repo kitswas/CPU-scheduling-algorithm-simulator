@@ -53,7 +53,7 @@ std::vector<std::unique_ptr<Process>> CFS::schedule(time_unit &currentTime, std:
 
 	if (currentProcess != nullptr)
 	{
-		if (currentProcess->remainingBurstTime > 0 && currentTime < (currentProcess->reentryTime + quantum))
+		if (currentProcess->remainingBurstTime > 0 && currentTime <= (currentProcess->reentryTime + quantum))
 		{
 			currentProcess->remainingBurstTime--;
 		}

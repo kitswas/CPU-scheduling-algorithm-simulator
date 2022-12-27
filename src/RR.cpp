@@ -62,7 +62,7 @@ std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::
 
 	if (currentProcess != nullptr)
 	{
-		if (currentProcess->remainingBurstTime > 0 && currentTime < (currentProcess->reentryTime + quantum))
+		if (currentProcess->remainingBurstTime > 0 && currentTime <= (currentProcess->reentryTime + quantum))
 		{
 			currentProcess->remainingBurstTime--;
 		}
@@ -81,7 +81,7 @@ std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::
 			scheduled_processes.push_back(std::move(currentProcess->process));
 			currentProcess = nullptr;
 		}
-		else if (currentTime == (currentProcess->reentryTime + quantum))
+		else if (currentTime >= (currentProcess->reentryTime + quantum))
 		{
 			// log preempted
 			std::cout << "Process " << currentProcess->process->getPid() << " preempted at time " << currentTime << " milliseconds\n";
