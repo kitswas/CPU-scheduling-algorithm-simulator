@@ -1,5 +1,6 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
+    [ "CFS.cpp", "CFS_8cpp.html", "CFS_8cpp" ],
     [ "FCFS.cpp", "FCFS_8cpp.html", null ],
     [ "logger.hpp", "logger_8hpp.html", "logger_8hpp" ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
@@ -11,6 +12,8 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "process.hpp", "process_8hpp.html", "process_8hpp" ],
     [ "process_creator.cpp", "process__creator_8cpp.html", null ],
     [ "process_creator.hpp", "process__creator_8hpp.html", "process__creator_8hpp" ],
+    [ "rbtree.cpp", "rbtree_8cpp.html", null ],
+    [ "rbtree.hpp", "rbtree_8hpp.html", "rbtree_8hpp" ],
     [ "RR.cpp", "RR_8cpp.html", "RR_8cpp" ],
     [ "scheduler.hpp", "scheduler_8hpp.html", "scheduler_8hpp" ],
     [ "simulator.cpp", "simulator_8cpp.html", "simulator_8cpp" ],

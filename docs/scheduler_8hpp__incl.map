@@ -1,11 +1,12 @@
 <map id="src/scheduler.hpp" name="src/scheduler.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="60,5,195,31"/>
-<area shape="rect" id="node2" href="$min__heap_8hpp.html" title=" " alt="" coords="10,152,125,177"/>
-<area shape="rect" id="node6" href="$logger_8hpp.html" title=" " alt="" coords="141,79,231,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,225,68,251"/>
-<area shape="rect" id="node4" title=" " alt="" coords="93,225,170,251"/>
-<area shape="rect" id="node5" title=" " alt="" coords="194,225,274,251"/>
-<area shape="rect" id="node7" title=" " alt="" coords="149,152,223,177"/>
-<area shape="rect" id="node8" href="$process_8hpp.html" title=" " alt="" coords="247,152,347,177"/>
-<area shape="rect" id="node9" title=" " alt="" coords="298,225,357,251"/>
+<area shape="rect" id="node1" title=" " alt="" coords="122,5,257,31"/>
+<area shape="rect" id="node2" href="$min__heap_8hpp.html" title=" " alt="" coords="5,152,120,177"/>
+<area shape="rect" id="node6" href="$rbtree_8hpp.html" title=" " alt="" coords="145,152,234,177"/>
+<area shape="rect" id="node7" href="$logger_8hpp.html" title=" " alt="" coords="263,79,353,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="9,225,71,251"/>
+<area shape="rect" id="node4" title=" " alt="" coords="96,225,173,251"/>
+<area shape="rect" id="node5" title=" " alt="" coords="197,225,277,251"/>
+<area shape="rect" id="node8" title=" " alt="" coords="382,152,455,177"/>
+<area shape="rect" id="node9" href="$process_8hpp.html" title=" " alt="" coords="258,152,358,177"/>
+<area shape="rect" id="node10" title=" " alt="" coords="301,225,360,251"/>
 </map>
