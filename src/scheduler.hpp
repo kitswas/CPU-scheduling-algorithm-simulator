@@ -2,6 +2,7 @@
 #define SCHEDULER_CLASS
 
 #include "min_heap.hpp"
+#include "rbtree.hpp"
 #include "logger.hpp"
 
 /**
@@ -25,8 +26,8 @@ private:
 public:
 	FCFS();
 	~FCFS();
-	std::vector<std::unique_ptr<Process>> schedule(time_unit &currentTime, std::shared_ptr<Logger> logger, time_unit quantum=-1);
-	bool addToReadyQueue(std::unique_ptr<Process> &process, time_unit _currentTime=-1);
+	std::vector<std::unique_ptr<Process>> schedule(time_unit &currentTime, std::shared_ptr<Logger> logger, time_unit quantum = -1);
+	bool addToReadyQueue(std::unique_ptr<Process> &process, time_unit _currentTime = -1);
 };
 
 struct RRProcess
@@ -34,7 +35,7 @@ struct RRProcess
 	std::unique_ptr<Process> process;
 	time_unit remainingBurstTime;
 	time_unit reentryTime;
-	RRProcess(std::unique_ptr<Process> process, time_unit remainingBurstTime, time_unit& reentryTime): process(std::move(process)), remainingBurstTime(remainingBurstTime), reentryTime(reentryTime){}
+	RRProcess(std::unique_ptr<Process> process, time_unit remainingBurstTime, time_unit &reentryTime) : process(std::move(process)), remainingBurstTime(remainingBurstTime), reentryTime(reentryTime) {}
 };
 
 std::ostream &operator<<(std::ostream &os, const RRProcess &rrprocess);
@@ -51,10 +52,27 @@ public:
 	bool addToReadyQueue(std::unique_ptr<Process> &process, time_unit currentTime);
 };
 
+struct CFSProcess
+{
+	std::unique_ptr<Process> process;
+	time_unit vruntime;
+	time_unit remainingBurstTime;
+	time_unit reentryTime;
+	CFSProcess(std::unique_ptr<Process> process, time_unit vruntime) : process(std::move(process)), vruntime(vruntime) {}
+};
+
+std::ostream &operator<<(std::ostream &os, const CFSProcess &cfsprocess);
+
 class CFS : public Scheduler
 {
 private:
-	/* data */
+	RBTree<std::unique_ptr<CFSProcess>> ready_queue;
+
+public:
+	CFS();
+	~CFS();
+	std::vector<std::unique_ptr<Process>> schedule(time_unit &currentTime, std::shared_ptr<Logger> logger, time_unit quantum);
+	bool addToReadyQueue(std::unique_ptr<Process> &process, time_unit _currentTime = -1);
 };
 
 #endif // SCHEDULER_CLASS

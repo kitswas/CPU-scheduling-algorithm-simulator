@@ -1,64 +1,55 @@
 #include "scheduler.hpp"
 
-std::ostream &operator<<(std::ostream &os, const RRProcess &rrprocess)
+std::ostream &operator<<(std::ostream &os, const CFSProcess &cfsprocess)
 {
-	return os << "Process: " << rrprocess.process->getPid() << ", Remaining Burst Time: " << rrprocess.remainingBurstTime << ", Start Time: " << rrprocess.reentryTime;
+	return os << "Process: " << cfsprocess.process->getPid() << ", VRuntime: " << cfsprocess.vruntime;
 }
 
 /**
- * @brief Compare two RRProcess objects by their reentry time. If the reentry times are equal, compare by arrival time.
+ * @brief Compare two CFSProcess objects by their vruntime.
  *
- * @return `-1` if `a < b`, `1` if `a > b`, otherwise by arrival time,
- * `-2` if `a < b`, `2` if `a > b`, `0` if `a == b`
  */
-int compareReentryTime(const std::unique_ptr<RRProcess> &a, const std::unique_ptr<RRProcess> &b)
+int compareVRuntime(const std::unique_ptr<CFSProcess> &a, const std::unique_ptr<CFSProcess> &b)
 {
-	if (a->reentryTime < b->reentryTime)
+	if (a->vruntime < b->vruntime)
 	{
 		return -1;
 	}
-	else if (a->reentryTime > b->reentryTime)
+	else if (a->vruntime > b->vruntime)
 	{
 		return 1;
 	}
 	else
 	{
-		if (a->process->getArrivalTime() < b->process->getArrivalTime())
-		{
-			return -2;
-		}
-		else if (a->process->getArrivalTime() > b->process->getArrivalTime())
-		{
-			return 2;
-		}
-		else
-		{
-			return 0;
-		}
+		return 0;
 	}
 }
 
 /**
- * @brief A Round Robin (RR) scheduler
+ * @brief A Completely Fair Scheduler (CFS)
  *
  */
-RR::RR() : ready_queue(compareReentryTime)
+CFS::CFS() : ready_queue(compareVRuntime)
 {
 }
 
-RR::~RR() {}
-
-bool RR::addToReadyQueue(std::unique_ptr<Process> &process, time_unit currentTime)
+CFS::~CFS()
 {
-	ready_queue.insert(std::make_unique<RRProcess>(std::move(process), process->getBurstTime(), currentTime));
-	// std::cout << "RR::addToReadyQueue() called\n"; // debugging only
-	return true;
 }
 
-std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::shared_ptr<Logger> logger, time_unit quantum)
+std::vector<std::unique_ptr<Process>> CFS::schedule(time_unit &currentTime, std::shared_ptr<Logger> logger, time_unit quantum)
 {
 	std::vector<std::unique_ptr<Process>> scheduled_processes;
-	static std::unique_ptr<RRProcess> currentProcess = nullptr;
+	static std::unique_ptr<CFSProcess> currentProcess = nullptr;
+	size_t numProcesses = ready_queue.size() + (currentProcess != nullptr ? 1 : 0);
+	if (numProcesses > 1) // prevent division by zero
+	{
+		quantum = quantum / numProcesses;
+	}
+	if (quantum == 0)
+	{
+		quantum = 1; // minimum quantum
+	}
 
 	if (currentProcess != nullptr)
 	{
@@ -86,6 +77,8 @@ std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::
 			// log preempted
 			std::cout << "Process " << currentProcess->process->getPid() << " preempted at time " << currentTime << " milliseconds\n";
 			logger->log(currentTime, currentProcess->process->getPid(), "Preempted");
+			// update vruntime
+			currentProcess->vruntime += currentProcess->process->getBurstTime() - currentProcess->remainingBurstTime;
 			// reinsert into ready queue
 			currentProcess->reentryTime = currentTime;
 			ready_queue.insert(std::move(currentProcess));
@@ -96,9 +89,10 @@ std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::
 	if (currentProcess == nullptr)
 	{
 		// check if there are any more processes in the ready queue
-		if (!ready_queue.isEmpty())
+		if (ready_queue.size() > 0)
 		{
 			currentProcess = ready_queue.extractMin();
+
 			if (currentProcess->process->getStartTime() == -1) // on first run
 			{
 				currentProcess->process->setStartTime(currentTime);
@@ -114,6 +108,11 @@ std::vector<std::unique_ptr<Process>> RR::schedule(time_unit &currentTime, std::
 			return scheduled_processes; // no more processes to schedule
 		}
 	}
-
 	return scheduled_processes;
+}
+
+bool CFS::addToReadyQueue(std::unique_ptr<Process> &process, [[maybe_unused]] time_unit _currentTime)
+{
+	ready_queue.insert(std::make_unique<CFSProcess>(std::move(process), 0));
+	return false;
 }
