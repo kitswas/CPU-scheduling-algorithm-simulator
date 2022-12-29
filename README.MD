@@ -2,6 +2,13 @@
 
 This repository is a part of my undergraduate coursework.
 
+Follow the on-screen prompts to provide input.  
+The program creates two files:
+
+1. `processes.txt` - Contains the final results when the simulation completes.  
+An empty file indicates that no processes have completed execution. Run the program again with a higher simulation time.
+2. `status.txt` - Logs the events _(arrival, execution, completion, etc. of processes)_ in the simulator.
+
 ## Setting up your workspace
 
 This project has a [.editorconfig file](https://editorconfig.org/) to enforce project level coding standards.  
