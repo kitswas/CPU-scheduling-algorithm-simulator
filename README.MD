@@ -1,7 +1,7 @@
 # A CPU Scheduling Algorithm Simulator in C++
 
 This repository was a part of my undergraduate coursework.  
-It has now been made open-source under the [MIT License](LICENSE.TXT).
+It has now been made open-source under the MIT License.
 
 The project simulates the execution of processes on a CPU.
 
