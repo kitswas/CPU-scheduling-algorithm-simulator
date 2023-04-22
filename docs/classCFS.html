@@ -119,12 +119,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea1426bce9df3280b6c076c5c3104d96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFS.html#aea1426bce9df3280b6c076c5c3104d96">~CFS</a> ()</td></tr>
 <tr class="separator:aea1426bce9df3280b6c076c5c3104d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9e0ffc1e460b55ce798e1a268ebb9e7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFS.html#aa9e0ffc1e460b55ce798e1a268ebb9e7">schedule</a> (<a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> &amp;currentTime, std::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt; logger, <a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> quantum)</td></tr>
+<tr class="memdesc:aa9e0ffc1e460b55ce798e1a268ebb9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function represents moving forward by a single unit in time.  <a href="classCFS.html#aa9e0ffc1e460b55ce798e1a268ebb9e7">More...</a><br /></td></tr>
 <tr class="separator:aa9e0ffc1e460b55ce798e1a268ebb9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b92234acd70c320bbd7ab87e8965a3a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCFS.html#a3b92234acd70c320bbd7ab87e8965a3a">addToReadyQueue</a> (std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &amp;process, <a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> _currentTime=-1)</td></tr>
+<tr class="memdesc:a3b92234acd70c320bbd7ab87e8965a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function represents the addition of a newly arrived process to the ready queue.  <a href="classCFS.html#a3b92234acd70c320bbd7ab87e8965a3a">More...</a><br /></td></tr>
 <tr class="separator:a3b92234acd70c320bbd7ab87e8965a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f32400f96433a3bec7a8b39d5c662fe"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a4f32400f96433a3bec7a8b39d5c662fe">schedule</a> (<a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> &amp;currentTime, std::shared_ptr&lt; <a class="el" href="classLogger.html">Logger</a> &gt; logger, <a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> quantum)=0</td></tr>
+<tr class="memdesc:a4f32400f96433a3bec7a8b39d5c662fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function represents moving forward by a single unit in time.  <a href="classScheduler.html#a4f32400f96433a3bec7a8b39d5c662fe">More...</a><br /></td></tr>
 <tr class="separator:a4f32400f96433a3bec7a8b39d5c662fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acae98d33b7ae3e0d09a38fec89703ebf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#acae98d33b7ae3e0d09a38fec89703ebf">addToReadyQueue</a> (std::unique_ptr&lt; <a class="el" href="classProcess.html">Process</a> &gt; &amp;process, <a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a> currentTime)=0</td></tr>
+<tr class="memdesc:acae98d33b7ae3e0d09a38fec89703ebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function represents the addition of a newly arrived process to the ready queue.  <a href="classScheduler.html#acae98d33b7ae3e0d09a38fec89703ebf">More...</a><br /></td></tr>
 <tr class="separator:acae98d33b7ae3e0d09a38fec89703ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -184,7 +188,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="process_8hpp.html#a0cbc04a363a59ac583f22dec635d8c35">time_unit</a>&#160;</td>
-          <td class="paramname"><em>_currentTime</em> = <code>-1</code>&#160;</td>
+          <td class="paramname"><em>currentTime</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -198,6 +202,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This function represents the addition of a newly arrived process to the ready queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">process</td><td>The process to add </td></tr>
+    <tr><td class="paramname">currentTime</td><td>The simulation time when the process arrived, i.e., now </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="classScheduler.html#acae98d33b7ae3e0d09a38fec89703ebf">Scheduler</a>.</p>
 
@@ -242,6 +255,17 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This function represents moving forward by a single unit in time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">currentTime</td><td>The current simulation time </td></tr>
+    <tr><td class="paramname">logger</td><td>The <a class="el" href="classLogger.html">Logger</a> instance to use for event logging </td></tr>
+    <tr><td class="paramname">quantum</td><td>The time quantum (if required by the scheduler) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::unique_ptr&lt;Process&gt;&gt; The list of scheduled processes till now </dd></dl>
 
 <p>Implements <a class="el" href="classScheduler.html#a4f32400f96433a3bec7a8b39d5c662fe">Scheduler</a>.</p>
 

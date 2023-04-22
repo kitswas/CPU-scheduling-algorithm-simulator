@@ -26,9 +26,11 @@ var NAVTREE =
 [
   [ "Scheduler Sim", "index.html", [
     [ "A CPU Scheduling Algorithm Simulator in C++", "index.html", [
-      [ "Setting up your workspace", "index.html#autotoc_md1", null ],
-      [ "How to run", "index.html#autotoc_md2", null ],
-      [ "Generating Documentation", "index.html#autotoc_md3", null ]
+      [ "Usage", "index.html#autotoc_md1", null ],
+      [ "Design", "index.html#autotoc_md2", null ],
+      [ "Setting up your workspace", "index.html#autotoc_md3", null ],
+      [ "How to run", "index.html#autotoc_md4", null ],
+      [ "Generating Documentation", "index.html#autotoc_md5", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
