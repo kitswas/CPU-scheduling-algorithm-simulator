@@ -5,9 +5,8 @@
 #include "process.hpp"
 
 /**
- * @brief This class will create an array of processes and
- * assign a random arrival time and burst time to each process.
- *
+ * @brief This class creates an array of processes and assigns
+ * a random arrival time and burst time to each process.
  */
 class ProcessCreator
 {

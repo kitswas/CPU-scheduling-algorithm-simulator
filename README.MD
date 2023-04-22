@@ -1,6 +1,11 @@
 # A CPU Scheduling Algorithm Simulator in C++
 
-This repository is a part of my undergraduate coursework.
+This repository was a part of my undergraduate coursework.  
+It has now been made open-source under the [MIT License](LICENSE.TXT).
+
+The project simulates the execution of processes on a CPU.
+
+## Usage
 
 Follow the on-screen prompts to provide input.  
 The program creates two files:
@@ -8,6 +13,16 @@ The program creates two files:
 1. `processes.txt` - Contains the final results when the simulation completes.  
 An empty file indicates that no processes have completed execution. Run the program again with a higher simulation time.
 2. `status.txt` - Logs the events _(arrival, execution, completion, etc. of processes)_ in the simulator.
+
+## Design
+
+There are 3 types of schedulers implemented in this project:
+
+1. First Come First Serve (FCFS)
+2. Round Robin (RR)
+3. Completely Fair Scheduler (CFS)
+
+The project uses a [Strategy Pattern](https://en.wikipedia.org/wiki/Strategy_pattern) to implement the schedulers.
 
 ## Setting up your workspace
 

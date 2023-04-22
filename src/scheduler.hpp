@@ -13,7 +13,22 @@ class Scheduler
 {
 protected:
 public:
+	/**
+	 * @brief This function represents moving forward by a single unit in time.
+	 * 
+	 * @param currentTime The current simulation time
+	 * @param logger The Logger instance to use for event logging
+	 * @param quantum The time quantum (if required by the scheduler)
+	 * @return std::vector<std::unique_ptr<Process>> The list of scheduled processes till now
+	 */
 	virtual std::vector<std::unique_ptr<Process>> schedule(time_unit &currentTime, std::shared_ptr<Logger> logger, time_unit quantum) = 0;
+
+	/**
+	 * @brief This function represents the addition of a newly arrived process to the ready queue.
+	 * 
+	 * @param process The process to add
+	 * @param currentTime The simulation time when the process arrived, i.e., now
+	 */
 	virtual bool addToReadyQueue(std::unique_ptr<Process> &process, time_unit currentTime) = 0;
 	// virtual void printSchedule() = 0;
 };
