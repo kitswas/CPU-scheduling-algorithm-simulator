@@ -1,6 +1,9 @@
 <map id="Scheduler" name="Scheduler">
-<area shape="rect" id="node1" title="Abstract class for all scheduler types." alt="" coords="60,5,147,31"/>
-<area shape="rect" id="node2" href="$classCFS.html" title=" " alt="" coords="5,79,52,104"/>
-<area shape="rect" id="node3" href="$classFCFS.html" title=" " alt="" coords="76,79,131,104"/>
-<area shape="rect" id="node4" href="$classRR.html" title=" " alt="" coords="155,79,195,104"/>
+<area shape="rect" id="Node000001" title="Abstract class for all scheduler types." alt="" coords="60,5,147,31"/>
+<area shape="rect" id="Node000002" href="$classCFS.html" title=" " alt="" coords="5,79,52,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,42,43,80,39,77,80,38"/>
+<area shape="rect" id="Node000003" href="$classFCFS.html" title=" " alt="" coords="76,79,131,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,44,106,79,101,79,101,44"/>
+<area shape="rect" id="Node000004" href="$classRR.html" title=" " alt="" coords="155,79,195,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="127,39,166,77,162,80,123,43"/>
 </map>

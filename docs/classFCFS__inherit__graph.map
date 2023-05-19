@@ -1,4 +1,5 @@
 <map id="FCFS" name="FCFS">
-<area shape="rect" id="node1" title=" " alt="" coords="21,79,76,104"/>
-<area shape="rect" id="node2" href="$classScheduler.html" title="Abstract class for all scheduler types." alt="" coords="5,5,92,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="21,79,76,104"/>
+<area shape="rect" id="Node000002" href="$classScheduler.html" title="Abstract class for all scheduler types." alt="" coords="5,5,92,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,44,51,79,46,79,46,44"/>
 </map>

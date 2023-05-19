@@ -9,43 +9,49 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 78)">
 <title>src/printer.hpp</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title=" ">
 <polygon fill="#999999" stroke="#666666" points="141,-74 55,-74 55,-55 141,-55 141,-74"/>
 <text text-anchor="middle" x="98" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">src/printer.hpp</text>
 </a>
 </g>
 </g>
 <!-- Node2 -->
-<g id="node2" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="printer_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="printer_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="86,-19 0,-19 0,0 86,0 86,-19"/>
 <text text-anchor="middle" x="43" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">src/printer.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
-<g id="edge1" class="edge">
+<g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
+<g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M81.71,-47.8C71.96,-38.41 59.95,-26.83 51.91,-19.09"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="79.29,-50.33 88.92,-54.75 84.15,-45.29 79.29,-50.33"/>
+</a>
+</g>
 </g>
 <!-- Node3 -->
-<g id="node3" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="simulator_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="simulator_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="204,-19 104,-19 104,0 204,0 204,-19"/>
 <text text-anchor="middle" x="154" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">src/simulator.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
+<g id="edge2_Node000001_Node000003" class="edge">
 <title>Node1&#45;&gt;Node3</title>
+<g id="a_edge2_Node000001_Node000003"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M114.33,-48.04C124.26,-38.64 136.59,-26.98 144.84,-19.17"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="111.85,-45.57 107,-54.98 116.67,-50.65 111.85,-45.57"/>
+</a>
+</g>
 </g>
 </g>
 </svg>

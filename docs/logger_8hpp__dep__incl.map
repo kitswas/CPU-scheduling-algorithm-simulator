@@ -1,12 +1,21 @@
 <map id="src/logger.hpp" name="src/logger.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="310,5,423,31"/>
-<area shape="rect" id="node2" href="$scheduler_8hpp.html" title=" " alt="" coords="299,79,434,104"/>
-<area shape="rect" id="node3" href="$CFS_8cpp.html" title=" " alt="" coords="5,152,101,177"/>
-<area shape="rect" id="node4" href="$FCFS_8cpp.html" title=" " alt="" coords="125,152,229,177"/>
-<area shape="rect" id="node5" href="$RR_8cpp.html" title=" " alt="" coords="253,152,344,177"/>
-<area shape="rect" id="node6" href="$min__heap_8cpp.html" title=" " alt="" coords="368,152,504,177"/>
-<area shape="rect" id="node7" href="$rbtree_8cpp.html" title=" " alt="" coords="529,152,639,177"/>
-<area shape="rect" id="node8" href="$simulator_8hpp.html" title=" " alt="" coords="663,152,798,177"/>
-<area shape="rect" id="node9" href="$main_8cpp.html" title="Execution starts here." alt="" coords="606,225,711,251"/>
-<area shape="rect" id="node10" href="$simulator_8cpp.html" title=" " alt="" coords="736,225,869,251"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="310,5,423,31"/>
+<area shape="rect" id="Node000002" href="$scheduler_8hpp.html" title=" " alt="" coords="299,79,434,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="369,44,369,79,364,79,364,44"/>
+<area shape="rect" id="Node000003" href="$CFS_8cpp.html" title=" " alt="" coords="5,152,101,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="304,110,102,155,101,150,303,104"/>
+<area shape="rect" id="Node000004" href="$FCFS_8cpp.html" title=" " alt="" coords="125,152,229,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="324,111,209,154,207,149,323,106"/>
+<area shape="rect" id="Node000005" href="$RR_8cpp.html" title=" " alt="" coords="253,152,344,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="348,116,312,154,308,150,344,112"/>
+<area shape="rect" id="Node000006" href="$min__heap_8cpp.html" title=" " alt="" coords="368,152,504,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="389,112,427,150,423,154,386,116"/>
+<area shape="rect" id="Node000007" href="$rbtree_8cpp.html" title=" " alt="" coords="529,152,639,177"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="415,106,550,149,548,154,414,111"/>
+<area shape="rect" id="Node000008" href="$simulator_8hpp.html" title=" " alt="" coords="663,152,798,177"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="439,104,672,149,671,155,438,109"/>
+<area shape="rect" id="Node000009" href="$main_8cpp.html" title="Execution starts here." alt="" coords="606,225,711,251"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="711,189,672,227,668,223,707,185"/>
+<area shape="rect" id="Node000010" href="$simulator_8cpp.html" title=" " alt="" coords="736,225,869,251"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="754,185,793,223,789,227,751,189"/>
 </map>

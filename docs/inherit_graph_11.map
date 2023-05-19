@@ -1,6 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classScheduler.html" title="Abstract class for all scheduler types." alt="" coords="5,55,92,80"/>
-<area shape="rect" id="node2" href="$classCFS.html" title=" " alt="" coords="144,5,191,31"/>
-<area shape="rect" id="node3" href="$classFCFS.html" title=" " alt="" coords="140,55,195,80"/>
-<area shape="rect" id="node4" href="$classRR.html" title=" " alt="" coords="147,104,187,129"/>
+<area shape="rect" id="Node000000" href="$classScheduler.html" title="Abstract class for all scheduler types." alt="" coords="5,55,92,80"/>
+<area shape="rect" id="Node000001" href="$classCFS.html" title=" " alt="" coords="144,5,191,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="91,47,143,25,145,30,93,52"/>
+<area shape="rect" id="Node000002" href="$classFCFS.html" title=" " alt="" coords="140,55,195,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="106,65,140,65,140,70,106,70"/>
+<area shape="rect" id="Node000003" href="$classRR.html" title=" " alt="" coords="147,104,187,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="93,83,148,106,146,111,91,88"/>
 </map>
