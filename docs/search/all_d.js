@@ -1,20 +1,15 @@
 var searchData=
 [
-  ['save_5fprocesses_5fto_5ffile_0',['save_processes_to_file',['../printer_8hpp.html#ac4f113918dd5df44bb83c6eb560b66a3',1,'save_processes_to_file(std::vector&lt; std::unique_ptr&lt; Process &gt; &gt; &amp;processes):&#160;printer.cpp'],['../printer_8cpp.html#ac4f113918dd5df44bb83c6eb560b66a3',1,'save_processes_to_file(std::vector&lt; std::unique_ptr&lt; Process &gt; &gt; &amp;processes):&#160;printer.cpp']]],
-  ['schedule_1',['schedule',['../classScheduler.html#a4f32400f96433a3bec7a8b39d5c662fe',1,'Scheduler::schedule()'],['../classFCFS.html#af563e6702383c0d179f19fa887751fdf',1,'FCFS::schedule()'],['../classRR.html#ada9f960c938baabfe1d6f0da3c1f4af6',1,'RR::schedule()'],['../classCFS.html#aa9e0ffc1e460b55ce798e1a268ebb9e7',1,'CFS::schedule()']]],
-  ['scheduler_2',['Scheduler',['../classScheduler.html',1,'']]],
-  ['scheduler_2ehpp_3',['scheduler.hpp',['../scheduler_8hpp.html',1,'']]],
-  ['seconds_4',['seconds',['../simulator_8cpp.html#a51149a5e42d1aaed3954ab46f0b095b2',1,'simulator.cpp']]],
-  ['setcompletiontime_5',['setCompletionTime',['../classProcess.html#ab20e6659fa52c5b6afa75b4e8c9e7df1',1,'Process']]],
-  ['setresponsetime_6',['setResponseTime',['../classProcess.html#a57431ae2089a8473f55cf30729899214',1,'Process']]],
-  ['setstarttime_7',['setStartTime',['../classProcess.html#a24cde6486baf4a297137695bb0bc56cb',1,'Process']]],
-  ['setturnaroundtime_8',['setTurnAroundTime',['../classProcess.html#a3508371469a34a469c38a49d6ae4e4de',1,'Process']]],
-  ['setwaitingtime_9',['setWaitingTime',['../classProcess.html#a6e89d93a40084e962fe6b9320b968247',1,'Process']]],
-  ['simulator_10',['Simulator',['../classSimulator.html#afd473ecaec09d40bf0d4b826d334f178',1,'Simulator::Simulator()'],['../classSimulator.html',1,'Simulator']]],
-  ['simulator_2ecpp_11',['simulator.cpp',['../simulator_8cpp.html',1,'']]],
-  ['simulator_2ehpp_12',['simulator.hpp',['../simulator_8hpp.html',1,'']]],
-  ['size_13',['size',['../classRBTree.html#a2469a32a456da4bffb03f919e810547e',1,'RBTree']]],
-  ['sortprocessesbyarrivaltime_14',['sortProcessesByArrivalTime',['../classSimulator.html#aa3f1e3544b1ea0fb66b687e031193603',1,'Simulator']]],
-  ['sortprocessesbypid_15',['sortProcessesByPid',['../classSimulator.html#a3f27898006dbcf180b218c2f18d1166a',1,'Simulator']]],
-  ['startsim_16',['startSim',['../classSimulator.html#a8443869bad129650f83657b463400932',1,'Simulator']]]
+  ['rbtree_0',['rbtree',['../classRBTree.html',1,'RBTree&lt; T &gt;'],['../classRBTree.html#acebc92d29c46b8edd93edb8c704c089a',1,'RBTree::RBTree()']]],
+  ['rbtree_2ecpp_1',['rbtree.cpp',['../rbtree_8cpp.html',1,'']]],
+  ['rbtree_2ehpp_2',['rbtree.hpp',['../rbtree_8hpp.html',1,'']]],
+  ['rbtree_3c_20std_3a_3aunique_5fptr_3c_20cfsprocess_20_3e_20_3e_3',['RBTree&lt; std::unique_ptr&lt; CFSProcess &gt; &gt;',['../classRBTree.html',1,'']]],
+  ['readme_2emd_4',['README.MD',['../README_8MD.html',1,'']]],
+  ['reentrytime_5',['reentrytime',['../structRRProcess.html#a991c203a8f708d2c39d9bb89f762b722',1,'RRProcess::reentryTime'],['../structCFSProcess.html#a4413633acbf09d6f7b492ad1cefcec96',1,'CFSProcess::reentryTime']]],
+  ['remainingbursttime_6',['remainingbursttime',['../structRRProcess.html#abc32d196f2bc4e6b691601ff4a6f62e8',1,'RRProcess::remainingBurstTime'],['../structCFSProcess.html#ab333ae8f48f155f84dd46fcd2a3cf384',1,'CFSProcess::remainingBurstTime']]],
+  ['remove_7',['remove',['../classRBTree.html#af83e014a5a8c74953f718fed531cef53',1,'RBTree']]],
+  ['rr_8',['rr',['../classRR.html',1,'RR'],['../classRR.html#ad61ece80687d975ead0844d2687e4024',1,'RR::RR()']]],
+  ['rr_2ecpp_9',['RR.cpp',['../RR_8cpp.html',1,'']]],
+  ['rrprocess_10',['rrprocess',['../structRRProcess.html',1,'RRProcess'],['../structRRProcess.html#af38ca0e052995d03f24fc8c19153e649',1,'RRProcess::RRProcess()']]],
+  ['run_11',['How to run',['../index.html#how-to-run',1,'']]]
 ];
